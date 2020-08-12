@@ -1,0 +1,147 @@
+@media (max-width: 999px) { 
+
+
+.mobile {
+	display: block;
+}
+
+.bt-pesquisa .col-lg-10, .bt-pesquisa .col-lg-2 {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.nave .default {
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+}
+
+#avaliacoes {
+    padding: 50px 5px;
+}
+
+#avaliacoes .desc {
+    font-size: 11px;
+    text-align: justify;
+    color: #fff;
+    padding: 0 15px;
+} 
+
+body#prof_ {
+    background-image: url(../img/banner_azul_prof.png);
+    background-size: 800%;
+    background-position: top center;
+}
+
+.nav-item.dropdown {
+    text-align: center;
+}
+.desktop {
+	display: none;
+}
+
+#home .chamada, #home2 .chamada {
+	font-size: 2rem;
+}
+
+#home .container-xl {
+
+    padding-bottom: 40px;
+}
+
+.text-sm-center {
+    text-align: center!important;
+}
+
+#como_funciona .text-left {
+	text-align: center!important;
+}
+
+#home {
+    background-image: none;
+    padding-bottom: 0;
+    background-color: #3785ac; 
+}
+
+#home .desc, #home2 .desc {
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+#home .col-lg-9.mx-auto {
+	padding: 0 !important;
+}
+
+.col-lg-4:last-child .fundo-branco {
+    padding: 5px;
+    line-height: 2;
+    width: 100%;
+    text-align: center;
+    height: 53px;
+    display: inline-block;
+}
+
+
+.col-lg-8:first-child .fundo-branco {
+	padding: 5px;
+}
+
+.botao-quero {
+	text-align: center;
+}
+
+
+.navbar {
+    position: relative!important; 
+}
+
+section {
+	top:  initial;
+
+}
+
+.pos.l {
+    z-index: 2;
+    left: -2vw;
+}
+
+.pos.r {
+    right: -2vw;
+}
+
+.pos .btn.default {
+    padding: 5px;
+}
+
+.pos {
+    top: 50vw;
+}
+
+.icon {
+    margin: 5vw auto;
+    width: 100px;
+    height: 100px;
+}
+
+::placeholder, #cadastro_aluno .custom-file label {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.8rem;
+}
+
+#como_funciona .box .chamada {
+    text-align: center;
+}
+
+#quem_somos .desc {
+    padding: 0 10px;
+}
+
+.fundo-branco {
+    border-radius: 10px;
+} .bt-pesquisa .btn.default {
+    margin-top: 10px;
+    border-radius: 10px !important;
+}
+
+}

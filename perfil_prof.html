@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="EdUp" />
+        <meta name="keywords" content="EdUp" />
+        <meta name="robots" content="" />
+        <meta name="revisit-after" content="1 day" />
+        <meta name="language" content="Portuguese" />
+        <meta name="generator" content="N/A" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <link href="api/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/logo.png" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="api/calendar/dist/simple-calendar.css" />
+        <title>EdUp!</title>
+    </head>
+    <body>
+        <!--        <div class="loader">
+            <div class="text-center">
+                
+                <img src="img/logo.png" class="animated bounceIn infinite slow " alt=""><br><br>
+                <img src="img/logo_promo.png" class="animated fadeIn ll slow" alt="">
+                <br><br>
+                <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div> 
+            
+            </div>
+            </div> -->
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="aceitado">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title">
+                            <i class="fas fa-check"></i> <br />
+                            Aceitação de proposta
+                        </div>
+                        <label for="">Observações</label>
+                        <textarea name="" id="" cols="30" rows="3" class="form-control"> </textarea>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto mt-4">
+                                    <button class="btn default closeActual" data-toggle="modal" data-target="#confirmado">Confimar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="recusado">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title">
+                            <i class="fas fa-times"></i> <br />
+                            Recusando proposta
+                        </div>
+                        <label for="">Se desejar, pode informar o aluno o motivo da recusa:</label>
+                        <textarea name="" id="" cols="30" rows="3" class="form-control"> </textarea>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto mt-4">
+                                    <button class="btn default closeActual" data-toggle="modal" data-target="#rejeitado">Confimar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="rejeitado">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title">
+                            <i class="fas fa-check"></i> <br />
+                            Proposta rejeitada!
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto mt-4">
+                                    <button class="btn default closeActual">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg" id="menu">
+            <div class="navbar-brand">
+                <a href="#home" class="anch"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon3"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <!-- <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#avaliacoes">O que nossos alunos dizem</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#como_funciona">Como funciona?</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quem_somos">Quem somos</a>
+                    </li>
+                    </ul> -->
+                <ul class="navbar-nav ml-auto">
+                    <!--  <li class="nav-item nv text-sm-center">
+                        <a class="btn default" href="#" style="">Sou professor</a>
+                        </li>
+                        <br class="mobile" /> -->
+                    <div class="mobile nave">
+                        <a href="#propostas" class="btn default anch">Aulas futuras</a>
+                        <a href="#agenda" class="btn default anch">Agenda</a>
+                        <a href="#horarios" class="btn default anch">Horários</a>
+                        <a href="#galeria_videos" class="btn default anch">Galeria de videos</a>
+                        <!-- <a href="#meus_professores" class="btn default anch">Professores</a> -->
+                        <a href="#pagamento_aluno" class="btn default anch">Informações bancárias</a>
+                        <a href="#historico_aluno" class="btn default anch">Histórico de aulas</a>
+                        <!-- <a href="#" class="btn default anch">Histórico de pagamento</a> -->
+                        <a href="#perfil_aluno" class="btn default anch">Meu perfil</a>
+                        <a href="#ajuda_aluno" class="btn default anch">Ajuda</a>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Notificação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Notificação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Notificação</a>
+                        </div>
+                    </li>
+                    <li class="nav-item text-sm-center">
+                        <a href="#ajuda_aluno" class="nav-link anch">
+                        <i class="fas fa-question-circle"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+                        <a class="btn default" href="professor.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="aluno_logado">
+            <div class="row">
+                <div class="col-lg-2 desktop">
+                    <div class="menu-lateral">
+                        <div class="container-xl">
+                            <a href="#propostas" class="btn default anch">Aulas futuras</a>
+                            <a href="#horarios" class="btn default anch">Horários</a>
+                            <a href="#agenda" class="btn default anch">Agenda</a>
+                            <a href="#galeria_videos" class="btn default anch">Galeria de videos</a>
+                            <!-- <a href="#meus_professores" class="btn default anch">Professores</a> -->
+                            <a href="#pagamento_aluno" class="btn default anch">Informações bancárias</a>
+                            <a href="#historico_aluno" class="btn default anch">Histórico de aulas</a>
+                            <!-- <a href="#" class="btn default anch">Histórico de pagamento</a> -->
+                            <a href="#perfil_aluno" class="btn default anch">Meu perfil</a>
+                            <a href="#ajuda_aluno" class="btn default anch">Ajuda</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div id="propostas" style="display: block;" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Aulas futuras
+                            </div>
+                            <p class="text-center">
+                                Aqui você pode gerenciar suas aulas futuras! :)
+                            </p>
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Solicitado por: Ana Júlia
+                                        </button>
+                                        <small class="">09/07/2020</small>
+                                        <span class="badge badge-primary">Inglês</span>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Período</th>
+                                                        <th scope="col">Dia</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Manhã</td>
+                                                        <td>09/07/2020</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <label for="">Se desejar, pode anexar documentos</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" multiple class="custom-file-input form-control" id="file1" />
+                                                        <label class="custom-file-label" for="file1"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="text-center mt-4">
+                                                        <a href="#" style="font-size: 14px;" class="btn-block btn default closeActual">Enviar <i class="fas fa-paper-plane"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="text-center">
+                                                <a href="#" class="btn btn-success" data-target="#aceitado" data-toggle="modal">Aceitar <i class="fas fa-check"></i></a>
+                                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#recusado">Recusar <i class="fas fa-times"></i></a>
+                                                </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                                        Solicitado por: Ana Júlia
+                                        </button>
+                                        <small class="">09/07/2020</small>
+                                        <span class="badge badge-primary">Inglês</span>
+                                    </div>
+                                    <div id="collapse2" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Período</th>
+                                                        <th scope="col">Dia</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Manhã</td>
+                                                        <td>09/07/2020</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <label for="">Se desejar, pode anexar documentos</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" multiple class="custom-file-input form-control" id="file1" />
+                                                        <label class="custom-file-label" for="file1"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="text-center mt-4">
+                                                        <a href="#" style="font-size: 14px;" class="btn-block btn default closeActual">Enviar <i class="fas fa-paper-plane"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="text-center">
+                                                <a href="#" class="btn btn-success" data-target="#aceitado" data-toggle="modal">Aceitar <i class="fas fa-check"></i></a>
+                                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#recusado">Recusar <i class="fas fa-times"></i></a>
+                                                </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="agenda" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">Agenda</div>
+                            <p class="text-center">Clique no dia para ver sua aula marcada! :)</p>
+                            <div id="calendario"></div>
+                            <div class="chamada cinza">Lista</div>
+                            <p class="text-center">Aqui estão suas aulas futuras listadas!</p>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula de Inglês, Aluno João <span class="badge badge-danger">Aula em andamento</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula de Inglês, Aluno João <span class="badge badge-info">Pagamento confirmado</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula de Inglês, Aluno João <span class="badge badge-info">Pagamento confirmado</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula de Inglês, Aluno João <span class="badge badge-warning">Aguardando pagamento</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pagamento_aluno" class="insider">
+                        <div class="container-xl" style="min-height: 500px;">
+                            <div class="chamada cinza">
+                                Pagamento
+                            </div>
+                            <p class="text-center">Salve ou edite seus dados para receber</p>
+                            <ul class="nav nav-pills rounded nav-fill mb-3" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal"> <i class="fab fa-paypal"></i> Paypal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#nav-tab-bank"> <i class="fa fa-university"></i> Transferência bancária</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade" id="nav-tab-paypal">
+                                    <p>Paypal é a maneira mais fácil de pagar online</p>
+                                    <p>
+                                        <button type="button" class="btn btn-primary"><i class="fab fa-paypal"></i> Acessar Paypal</button>
+                                    </p>
+                                    <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="tab-pane fade" id="nav-tab-bank">
+                                    <p>Conta bancária</p>
+                                    <dl class="param">
+                                        <dt>Banco:</dt>
+                                        <dd>Banco XPTO</dd>
+                                    </dl>
+                                    <dl class="param">
+                                        <dt>Número da conta</dt>
+                                        <dd>12345678912345</dd>
+                                    </dl>
+                                    <dl class="param">
+                                        <dt>Digito</dt>
+                                        <dd>18</dd>
+                                    </dl>
+                                    <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <!-- tab-pane.// -->
+                            </div>
+                            <!-- tab-content .// -->
+                        </div>
+                    </div>
+                    <div id="historico_aluno" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">Histórico de aulas</div>
+                            <p class="text-center">
+                                Aqui você pode ver todo seu histórico!
+                            </p>
+                            <div class="row mb-4">
+                                <div class="col-lg-4">
+                                    <label for="">Escolha uma opção para ordenar</label>
+                                    <select class="form-control">
+                                        <option selected>Ordenar por:</option>
+                                        <option value="1">Data</option>
+                                        <option value="2">Matéria</option>
+                                        <option value="3">Professor</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="">Aqui você pode filtrar por matérias</label>
+                                    <select class="form-control">
+                                        <option selected>Matérias</option>
+                                        <option value="1">Inglês</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="">Ou aqui você pode pesquisar por qualquer palavra chave</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="search" value="" id="example-search-input" placeholder="Buscar" />
+                                        <span class="input-group-append">
+                                            <div class="input-group-text" style="background-color: #ee5921;"><i class="fa fa-search" style="color: #fff;"></i></div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Aula de Inglês, Aluno José
+                                        </button>
+                                        <small class="">09/07/2020</small>
+                                        <span class="badge badge-primary">Inglês</span>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Tópico</th>
+                                                        <th scope="col">Duração</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Lorem ipsum</td>
+                                                        <td>2 horas</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Conselhos do professor:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Minha avaliação da aula</b>: <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Aula de Inglês, Aluno José
+                                        </button>
+                                        <small class="">11/07/2020</small>
+                                        <span class="badge badge-primary">Inglês</span>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Tópico</th>
+                                                        <th scope="col">Duração</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Lorem ipsum</td>
+                                                        <td>2 horas</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Minha nota para a aula:</b>
+                                            <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span> <br />
+                                            <b>Comentários:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Aula de Inglês, Aluno José
+                                        </button>
+                                        <small class="">12/07/2020</small>
+                                        <span class="badge badge-primary">Inglês</span>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Tópico</th>
+                                                        <th scope="col">Duração</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Lorem ipsum</td>
+                                                        <td>2 horas</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Minha nota para a aula:</b>
+                                            <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span> <br />
+                                            <b>Comentários:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="perfil_aluno" class="insider">
+                        <div class="chamada cinza">Meu perfil</div>
+                        <p class="text-center">
+                            Aqui você pode editar seus dados, se quiser. <br />
+                            Apenas lembre em clicar em salvar!
+                        </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="text-center">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbG7XfojwgexJS50HnkEpEihsCDuCFp-dK69ZmrhXVoculu05S&s" width="100%" style="max-width: 170px;" alt="" />
+                                    </div>
+                                    <div class="form-group"><input placeholder="" value="Fulano de tal" type="text" class="form-control" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span></div>
+                                    <div class="form-group">
+                                        <input placeholder="" value="faluno@hotmail.com" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="form-group"><input placeholder="" value="abcdefgh1" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span></div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control" id="file" />
+                                        <label class="custom-file-label" for="file">suafoto.png</label>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <label for="">Diga nos um pouco da sua experiênica :)*</label>
+                                    <textarea name="" id="" rows="5" class="form-control"></textarea>
+                                    <label for="">Quais são suas licenciaturas?*</label>
+                                    <textarea name="" id="" rows="5" class="form-control"></textarea>
+                                    <label for="">Link do seu video de introdução*</label>
+                                    <input type="text" class="form-control" placeholder="www.link.com">
+                                    <br />
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control" id="file2" />
+                                        <label class="custom-file-label" for="file2">Seu CV*</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center mx-auto">
+                                                <br />
+                                                <button class="btn default btn-block">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="chamada cinza">
+                                        Meu anúncio
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <p class="text-center mt-3">Titulo do seu anúncio</p>
+                                            <input type="text" class="form-control" placeholder="Titulo*" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <p class="text-center mt-3">Valor</p>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon2">R$</span>
+                                                </div>
+                                                <input type="text" class="form-control formato-valor" placeholder="00,00" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="row">
+                                        <div class="col-lg-12">
+                                            <p class="text-center mt-0">Aula gratuita* (máx 60min.)</p>
+                                            <input type="text" class="form-control" placeholder=Youtube ou Vimeo">
+                                        </div>
+                                        </div> -->
+                                    <p class="text-center mt-3">Esse será seu resumo:</p>
+                                    <div class="container-xl">
+                                        <div id="summernote"></div>
+                                    </div>
+                                    <p class="text-center mt-3">Adicione tags ao seu anúncio (separadas por virgula)</p>
+                                    <textarea name="" id="" cols="4" rows="10" class="form-control" placeholder="*Tags"></textarea>
+                                    <div class="text-center mx-auto"> <br>
+                                        <button class="btn default btn-block">Salvar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="ajuda_aluno" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Ajuda
+                            </div>
+                            <p class="text-center">Precisa de ajuda? Escreva para gente!</p>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-7 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option selected>Assunto*</option>
+                                                        <option>Dúvida</option>
+                                                    </select>
+                                                    <span class="error error-message"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="" placeholder="Mensagem" id="" cols="30" rows="3" class="form-control"></textarea>
+                                            <span class="error error-message"></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <a href="#" class="btn default btn-block">Enviar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="text-center"> <br>
+                                <b>Cancelamento de Aulas</b> <br>
+                                - Antes de 24 horas, 20% do valor da aula cobrado. <br>
+                                - Entre 12 e 24 horas, 50% do valor da aula cobrado. <br>
+                                - Entre 2 e 12 horas, 80% do valor da aula cobrado. <br>
+                                - Abaixo de 2 horas/ausência na aula, 100% do valor da aula cobrado. <br>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="galeria_videos" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Galeria de videos
+                            </div>
+                            <p class="text-center">Caso queira editar, basta clicar em "editar" e digitar o novo caminho.</p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="card" style="width: 100%;">
+                                        <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Aula gratuita
+                                            </h5>
+                                            <div class="alterar-video hide">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <input type="text" class="form-control" placeholder="Youtube ou Vimeo">
+                                                        <div class="text-center">
+                                                            <a href="#" class="btn btn-primary alterar">Salvar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text">Enviado dia xx/xx/xxxx</p>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-primary alterar">Editar</a>
+                                                <a href="#" class="btn btn-danger alterar">Remover</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card" style="width: 100%;">
+                                        <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                Video introdução
+                                            </h5>
+                                            <div class="alterar-video hide">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <input type="text" class="form-control" placeholder="Youtube ou Vimeo">
+                                                        <div class="text-center">
+                                                            <a href="#" class="btn btn-primary alterar">Salvar</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text">Enviado dia xx/xx/xxxx</p>
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-primary alterar">Editar</a>
+                                                <a href="#" class="btn btn-danger alterar">Remover</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="horarios" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Horários
+                            </div>
+                            <p class="text-center">
+                                Preencha a sua disponibilidade
+                            </p>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-7 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option selected>Matéria*</option>
+                                                        <option>Inglês</option>
+                                                    </select>
+                                                    <span class="error error-message"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Você pode selecionar mais de uma data/horário!*</label>
+                                            <select name="" id="" class="form-control" multiple>
+                                                <option> 13/07/2020 - 12h00 às 13h00</option>
+                                                <option> 13/07/2020 - 13h00 às 14h00</option>
+                                                <option> 13/07/2020 - 14h00 às 15h00</option>
+                                                <option> 13/07/2020 - 15h00 às 16h00</option>
+                                            </select>
+                                            <span class="error error-message"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="" placeholder="Observações" id="" cols="30" rows="3" class="form-control"></textarea>
+                                            <span class="error error-message"></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <a href="#" class="btn default">Salvar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validation.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
+        <script type="text/javascript" src="api/calendar/dist/jquery.simple-calendar.js"></script>
+        <script src="js/masks.js"></script>
+        <script>
+            $("#summernote").summernote({
+                placeholder: "",
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ["style", ["style"]],
+                    ["font", ["bold", "underline", "clear"]],
+                    ["color", ["color"]],
+                    ["para", ["ul", "ol", "paragraph"]],
+                    ["table", ["table"]],
+                    ["insert", ["link", "picture", "video"]],
+                    ["view", ["fullscreen", "codeview", "help"]],
+                ],
+            });
+        </script>
+    </body>
+</html>

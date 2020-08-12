@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="EdUp" />
+        <meta name="keywords" content="EdUp" />
+        <meta name="robots" content="" />
+        <meta name="revisit-after" content="1 day" />
+        <meta name="language" content="Portuguese" />
+        <meta name="generator" content="N/A" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <link href="api/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/logo.png" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="api/calendar/dist/simple-calendar.css" />
+        <title>EdUp!</title>
+    </head>
+    <body>
+        <!--        <div class="loader">
+            <div class="text-center">
+                
+                <img src="img/logo.png" class="animated bounceIn infinite slow " alt=""><br><br>
+                <img src="img/logo_promo.png" class="animated fadeIn ll slow" alt="">
+                <br><br>
+                <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div> 
+            
+            </div>
+            </div> -->
+
+        <nav class="navbar navbar-expand-lg" id="menu">
+            <div class="navbar-brand">
+                <a href="#home" class="anch"><img src="img/logo.png" alt="" /></a>
+                
+            </div>
+            <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon3"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <!-- <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#avaliacoes">O que nossos alunos dizem</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#como_funciona">Como funciona?</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quem_somos">Quem somos</a>
+                    </li>
+                </ul> -->
+                <ul class="navbar-nav ml-auto">
+                    <!--  <li class="nav-item nv text-sm-center">
+                        <a class="btn default" href="#" style="">Sou professor</a>
+                    </li>
+                    <br class="mobile" /> -->
+                    <div class="mobile nave">
+                            <a href="#agenda" class="btn default anch">Agenda</a>
+                            <!-- <a href="#meus_professores" class="btn default anch">Professores</a> -->
+                            <a href="busca_professor-logado.html" class="btn default">Procurar professor</a>
+                            <a href="#pagamento_aluno" class="btn default anch">Pagamento</a>
+                            <a href="#historico_aluno" class="btn default anch">Histórico de aulas</a>
+                            <!-- <a href="#" class="btn default anch">Histórico de pagamento</a> -->
+                            <a href="#perfil_aluno" class="btn default anch">Meu perfil</a>
+                            <a href="#ajuda_aluno" class="btn default anch">Ajuda</a>
+                        </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Notificação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Notificação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Notificação</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item text-sm-center">
+                        <a href="#ajuda_aluno" class="nav-link anch">
+                            <i class="fas fa-question-circle"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+                        <a class="btn default" href="index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+         <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="avaliacao_aluno">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+
+                        <div class="container-xl">
+                            <div class="title mx-auto">
+                               Aula encerrada
+                            </div>
+                            <p class="text-center">
+                               Não deixe de avaliar seu professor, e se houver algum comentário <br>(Vísivel apenas para você)
+                            </p>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <label for="">Avaliação</label>
+                                   <p class="text-center">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    
+                                    </p>
+
+                                    <label for="">Comentários</label>
+                                    <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+
+                                    <label for="">Se desejar, pode anexar documentos</label>
+
+                                    <!-- <div class="custom-file">
+                                        <input type="file" multiple class="custom-file-input form-control" id="file1" />
+                                        <label class="custom-file-label" for="file1"></label>
+                                    </div> -->
+
+                                    <div class=" mt-3">
+                                        <a href="#" class="btn default  laranja btn-block closeActual" data-toggle="modal" data-target="#sucesso_agendamento">Enviar <i class="fas fa-paper-plane"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="avaliacao_prof">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+
+                        <div class="container-xl">
+                            <div class="title mx-auto">
+                               Aula encerrada
+                            </div>
+                            <p class="text-center">
+                               Não deixe de avaliar sua aula, e se houver algum conselho para o aluno 
+                            </p>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <label for="">Avaliação</label>
+                                   <p class="text-center">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    
+                                    </p>
+
+                                    <label for="">Se quiser, pode dar um conselho ao aluno!</label>
+                                    <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+
+
+
+                                    <label for="">Se desejar, pode anexar documentos</label>
+
+                                    <div class="custom-file">
+                                        <input type="file" multiple class="custom-file-input form-control" id="file1" />
+                                        <label class="custom-file-label" for="file1"></label>
+                                    </div> 
+
+                                    <div class=" mt-3">
+                                        <a href="#" class="btn default  laranja btn-block closeActual">Enviar <i class="fas fa-paper-plane"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="chamada">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pessoas">
+                        <div class="foco text-center"> 
+                        <img src="img/p4.png" alt=""  style="max-width: 500px;"  width="100%">
+                    </div>
+
+                    <div class="n-foco text-center">
+                        <img src="img/p5.png" alt="" style="max-width: 350px;">
+                    </div>
+
+                    <div class="botoes">
+                        <button class="btn btn-primary">Anexar arquivo</button>
+                        <a href="#" class="btn btn-danger lg">Mutar Microfone <i class="fas fa-microphone-slash"></i></a>
+                         
+                        <a href="#" class="btn btn-danger lg" data-toggle="modal" data-target="#avaliacao_aluno">Encerrar a aula <i class="fas fa-phone-slash"></i></a>
+
+                    </div>
+                    </div>
+                </div>
+                 
+            </div>
+        </section>
+
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validation.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
+        <script type="text/javascript" src="api/calendar/dist/jquery.simple-calendar.js"></script>
+        <script src="js/masks.js"></script>
+        <script>
+            $('#summernote').summernote({
+        placeholder: '',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+        </script>
+    </body>
+</html>

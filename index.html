@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="EdUp" />
+        <meta name="keywords" content="EdUp" />
+        <meta name="robots" content="" />
+        <meta name="revisit-after" content="1 day" />
+        <meta name="language" content="Portuguese" />
+        <meta name="generator" content="N/A" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <link href="api/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/logo.png" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="api/steps/jquery.steps.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <title>EdUP!</title>
+    </head>
+    <body>
+        <!--        <div class="loader">
+            <div class="text-center">
+                
+                <img src="img/logo.png" class="animated bounceIn infinite slow " alt=""><br><br>
+                <img src="img/logo_promo.png" class="animated fadeIn ll slow" alt="">
+                <br><br>
+                <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div> 
+            
+            </div>
+            </div> -->
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="login_aluno">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Entrar
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <a href="#" class="btn default facebook">
+                                        <p><i class="fab fa-facebook-f"></i>Facebook</p>
+                                    </a>
+                                    <a href="#" class="btn default google">
+                                        <p><i class="fab fa-google"></i>Google</p>
+                                    </a>
+                                    <div class="form-group"><input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="form-group"><input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span></div>
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <div class="text-left mx-auto">
+                                                <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#esqueci_senha">Esqueci minha senha</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="text-right mx-auto">
+                                                <a href="perfil.html" class="btn default entrar">Entrar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="text-center">
+                                        <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#cadastro_aluno">
+                                        Você ainda não possui cadastro? <br />
+                                        <b style="color: #3785ac;"> Cadastre-se</b>
+                                        </a> <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="esqueci_senha">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Esqueceu sua senha?
+                        </div>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="form-group">
+                                        <label for="">Diga seu e-mail que enviaremos a recuperação para lá! :)</label>
+                                        <input placeholder="E-mail*" type="password" class="form-control" id="txtSenhaEsqueci" name="txtSenhaEsqueci" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center mx-auto">
+                                                <a href="#" class="btn default closeActual" data-toggle="modal" data-target="#senha_sucesso">Enviar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="senha_sucesso">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            <i class="fas fa-check"></i> <br />
+                            Enviamos sua senha para <br />
+                            esse e-mail!
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto">
+                                    <button class="btn default closeActual">Certo!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="cadastro_aluno">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Cadastre-se
+                        </div>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <a href="#" class="btn default facebook">
+                                        <p><i class="fab fa-facebook-f"></i>Facebook</p>
+                                    </a>
+                                    <a href="#" class="btn default google">
+                                        <p><i class="fab fa-google"></i>Google</p>
+                                    </a>
+                                    <div class="form-group">
+                                        <label for="">Nome de usuário* (Máx: 15 caracteres)</label>
+                                        <input placeholder="Usuário*" type="text" class="form-control" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">E-mail*</label>
+                                        <input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Senha* (Min: 8 caracteres, 1 letra maiuscula)</label>
+                                        <input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control" id="file2">
+                                        <label class="custom-file-label" for="file2">Sua foto</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center mx-auto"> <br>
+                                                <a href="busca_professor.html" class="btn default">Cadastrar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <div class="col-lg-6">
+                                            <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#login_aluno">
+                                            Possui cadastro? <br />
+                                            <b style="color: #3785ac;"> Entrar</b>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <a href="#" class="">Quero ser professor</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg" id="menu">
+            <div class="navbar-brand">
+                <a href="#home" class="anch"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon3"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#avaliacoes">O que nossos alunos dizem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#como_funciona">Como funciona?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quem_somos">Quem somos</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item nv text-sm-center">
+                        <a class="btn default" href="professor.html" style="">Sou professor</a>
+                    </li>
+                    <br class="mobile" />
+                    <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+                        <a class="btn default" href="#" data-toggle="modal" data-target="#login_aluno">Sou aluno</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="home">
+            <img src="img/banner_azul.png" width="100%" class="mobile" alt="" />
+            <div class="container-xl">
+                <div class="textos">
+                    <p class="text-left chamada">Conheça a EdUp</p>
+                    <p class="text-left desc">
+                        A EdUp providencia o instrumento de comunicação entre alunos e profissionais da educação dentro da plataforma. <br />
+                        <br />
+                        Todos os professores são profissionais com experiência, e professores com boas avaliações podem escolher a também serem moderadores da qualidade de ensino, supervisionando professores atuais (aqueles que possuem uma
+                        avaliação abaixo da nossa expectativa de qualidade) e aqueles que desejam entrar na plataforma!
+                    </p>
+                </div>
+                <div class="botao-quero mx-auto">
+                    <a href="#" class="btn default" data-toggle="modal" data-target="#cadastro_aluno">Quero me cadastrar!</a>
+                </div>
+                <div class="col-lg-9 mx-auto">
+                    <div class="row bt-pesquisa mt-5 mb-3">
+                        <div class="col-lg-10 mx-auto">
+                            <div class="fundo-branco">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="O que deseja aprender? Ex: Matematica" />
+                            </div>
+                            <b class="text-white">Mais procurados:</b> <a href="#" class="text-white">Inglês, </a><a href="#" class="text-white">Português, </a><a class="text-white" href="#">Matemática</a>
+                        </div>
+                        <div class="col-lg-2 mx-auto">
+                            <a href="busca_professor.html" class="btn default">
+                            Buscar <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="avaliacoes">
+            <div class="container-xl">
+                <div class="chamada cinza">
+                    O que nossos alunos dizem
+                </div>
+                <div class="row mb-5">
+                    <div class="col-lg-4">
+                        <div class="box-aval tipo-um">
+                            <div class="title">"Ótimos professores"</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="autor">Bianca, 21</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box-aval tipo-dois">
+                            <div class="title">"Ótimos professores"</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="autor">Bianca, 21</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box-aval tipo-um">
+                            <div class="title">"Ótimos professores"</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="autor">Bianca, 21</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chamada mt-5 cinza">
+                    Professores em destaque
+                </div>
+                <div class="aval">
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <span class="badge badge-primary">TOEFL</span>
+                                    <span class="badge badge-primary">Formado em Cambridge</span>
+                                    <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <span class="badge badge-primary">TOEFL</span>
+                                    <span class="badge badge-primary">Formado em Cambridge</span>
+                                    <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <span class="badge badge-primary">TOEFL</span>
+                                    <span class="badge badge-primary">Formado em Cambridge</span>
+                                    <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <span class="badge badge-primary">TOEFL</span>
+                                    <span class="badge badge-primary">Formado em Cambridge</span>
+                                    <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <span class="badge badge-primary">TOEFL</span>
+                                    <span class="badge badge-primary">Formado em Cambridge</span>
+                                    <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <span class="badge badge-primary">TOEFL</span>
+                                    <span class="badge badge-primary">Formado em Cambridge</span>
+                                    <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  <section id="avaliacoes">
+            <div class="container-xl">
+                <div class="chamada cinza">
+                    O que nossos alunos dizem
+                </div>
+                <div class="aval">
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+                                    <h5 class="card-title">Bianca, aluna.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+                                    <h5 class="card-title">Bianca, aluna.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+                                    <h5 class="card-title">Bianca, aluna.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+                                    <h5 class="card-title">Bianca, aluna.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-lg-12">
+                            <div class="card" style="width: 100%;">
+                                <img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Fulano, <b>professor de <a href="#">Inglês</a></b>
+                                    </h5>
+                                    <div class="col-lg-12 ml-auto text-right">
+                                        <span class="badge badge-pill badge-warning" style="color: #fff; font-size: 0.8rem;">5 <i class="fas fa-star"></i></span>
+                                    </div>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+                                    <h5 class="card-title">Bianca, aluna.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section> -->
+        <section id="como_funciona">
+            <div class="container-xl">
+                <div class="chamada">Como funciona?</div>
+                <div class="row">
+                    <div class="col-lg-4 boxes">
+                        <div class="chamada">
+                            Qual é o diferencial da EdUp?
+                        </div>
+                        <div class="desc">
+                            A nossa plataforma dá aos alunos a oportunidade de escolher seu professor, o tópico de Ensino e o horário desejado. Para professores, a plataforma providencia a oportunidade de darem aulas quando quiserem, tendo
+                            uma maior exposição ao mercado de alunos com simplicidade e eficiência.
+                        </div>
+                        <div class="text-left mx-auto">
+                            <br />
+                            <a href="#" class="btn default btn-block"  data-toggle="modal" data-target="#cadastro_aluno">Quero me cadastrar!</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 box">
+                        <div class="row">
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Escolha seu professor</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Progressão no seu ritmo</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Agendamento</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Preço</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="quem_somos">
+            <div class="row">
+                <div class="col-lg-6 desktop">
+                    <img src="img/quemsomos.png" style="width: 100%;" alt="" />
+                </div>
+                <div class="col-lg-6" style="padding: 25px 0;">
+                    <div class="container-xl">
+                        <div class="chamada">Quem somos</div>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. <br />
+                            <br />
+                            Ut pharetra sit amet aliquam id diam maecenas. Eget duis at tellus at urna condimentum mattis pellentesque id. Magna etiam tempor orci eu lobortis elementum. Duis convallis convallis tellus id. Tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Porttitor lacus luctus accumsan tortor posuere ac ut consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mobile">
+                    <img src="img/quemsomos.png" style="width: 100%;" alt="" />
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="links">
+                        <a href="politica.html">Politica de privacidade</a>
+                        <a href="termos.html">Termos de uso</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p>Lorem ipsum dolor - 2020</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="redes">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validation.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
+        <script type="text/javascript" src="api/calendar/dist/jquery.simple-calendar.js"></script>
+        <script src="js/masks.js"></script>
+        <script>
+            $(".aval").slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                prevArrow: '<div class="pos l"><button class="btn default"><i class="fas fa-angle-double-left"></i></button></div>',
+                nextArrow: '<div class="pos r"><button class="btn default"><i class="fas fa-angle-double-right"></i></i></button></div>',
+                responsive: [
+                    {
+                        breakpoint: 999,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true,
+                        },
+                    },
+                ],
+            });
+        </script>
+    </body>
+</html>

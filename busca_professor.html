@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="EdUp" />
+        <meta name="keywords" content="EdUp" />
+        <meta name="robots" content="" />
+        <meta name="revisit-after" content="1 day" />
+        <meta name="language" content="Portuguese" />
+        <meta name="generator" content="N/A" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <link href="api/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/logo.png" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="api/calendar/dist/simple-calendar.css" />
+        <title>EdUp!</title>
+    </head>
+    <body>
+        <!--        <div class="loader">
+            <div class="text-center">
+                
+                <img src="img/logo.png" class="animated bounceIn infinite slow " alt=""><br><br>
+                <img src="img/logo_promo.png" class="animated fadeIn ll slow" alt="">
+                <br><br>
+                <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div> 
+            
+            </div>
+            </div> -->
+
+           <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="login_aluno">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Entrar
+                        </div>
+
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <a href="#" class="btn default facebook">
+                                        <p><i class="fab fa-facebook-f"></i>Facebook</p>
+                                    </a>
+                                    <a href="#" class="btn default google">
+                                        <p><i class="fab fa-google"></i>Google</p>
+                                    </a>
+                                    <div class="form-group"><input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="form-group"><input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span></div>
+
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <div class="text-left mx-auto">
+                                                <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#esqueci_senha">Esqueci minha senha</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-5">
+                                            <div class="text-right mx-auto">
+                                                <a href="perfil.html" class="btn default entrar">Entrar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br />
+
+                                    <div class="text-center">
+                                        <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#cadastro_aluno">
+                                            Você ainda não possui cadastro? <br />
+                                            <b style="color: #3785ac;"> Cadastre-se</b>
+                                        </a> <br>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="esqueci_senha">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Esqueceu sua senha?
+                        </div>
+
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="form-group">
+                                        <label for="">Diga seu e-mail que enviaremos a recuperação para lá! :)</label>
+                                        <input placeholder="E-mail*" type="password" class="form-control" id="txtSenhaEsqueci" name="txtSenhaEsqueci" /><span class="error error-message"></span>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center mx-auto">
+                                                <button class="btn default closeActual" data-toggle="modal" data-target="#senha_sucesso">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="senha_sucesso">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            <i class="fas fa-check"></i> <br />
+                            Enviamos sua senha para <br />
+                            esse e-mail!
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto">
+                                    <button class="btn default closeActual">Certo!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="cadastro_aluno">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Cadastre-se
+                        </div>
+
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <a href="#" class="btn default facebook">
+                                        <p><i class="fab fa-facebook-f"></i>Facebook</p>
+                                    </a>
+                                    <a href="#" class="btn default google">
+                                        <p><i class="fab fa-google"></i>Google</p>
+                                    </a>
+                                    
+                                     <div class="form-group">
+                                        <label for="">Nome de usuário* (Máx: 15 caracteres)</label>
+                                        <input placeholder="Usuário*" type="text" class="form-control" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">E-mail*</label>
+                                        <input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Senha* (Min: 8 caracteres, 1 letra maiuscula)</label>
+                                        <input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span>
+                                    </div>
+
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Sua foto*</label>
+                                      </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center mx-auto"> <br>
+                                                <button class="btn default">Cadastrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <div class="text-center">
+                                        <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#login_aluno">
+                                             <br />Possui cadastro? <br />
+                                            <b style="color: #3785ac;"> Entrar</b>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg" id="menu">
+            <div class="navbar-brand">
+                <a href="#home" class="anch"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon3"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#avaliacoes">O que nossos alunos dizem</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#como_funciona">Como funciona?</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#quem_somos">Quem somos</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item nv text-sm-center">
+                        <a class="btn default" href="#" style="">Sou professor</a>
+                    </li>
+                    <br class="mobile" />
+                    <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+                        <a class="btn default" href="#" data-toggle="modal" data-target="#login_aluno">Sou aluno</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="buscar_professor">
+            <div class="principal">
+                <div class="chamada">
+                    Professores particulares
+                </div>
+                <p class="text-center text-white">Aqui você encontra os melhores professores e bem avaliados!</p>
+                <div class="col-lg-9 mx-auto">
+                    <div class="row bt-pesquisa mt-5 mb-3">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="fundo-branco">
+                            <input type="text" class="form-control" id="inputEmail3" placeholder="O que deseja aprender? Ex: Matematica" />
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mx-auto">
+                        <a href="#" class="btn default">
+                             Buscar <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+                <b class="text-white">Mais procurados:</b> <a href="#" class="text-white">Inglês, </a><a href="#" class="text-white">Português, </a><a class="text-white" href="#">Matemática</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="btn default mx-auto mobile bt-filtro" style="width: 100%;">
+                        Filtros <i class="fas fa-filter"></i>
+                    </div>
+                    <div class="filtros desktop">
+                        <p>Se preferir, pode filtrar :)</p>
+                        <label for="">Matérias</label>
+                        <div class="select_ mx-auto">
+                           <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck13">
+                            <label class="custom-control-label" for="customCheck13">Todas</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck14">
+                            <label class="custom-control-label" for="customCheck14">Inglês</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck15">
+                            <label class="custom-control-label" for="customCheck15">Português</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck16">
+                            <label class="custom-control-label" for="customCheck16">Geografia</label>
+                        </div>
+                        </div>
+                        
+
+                        <br />
+                        <br />
+
+                        <label for="">Disponibilidade</label>
+                        <div class="select_ mx-auto">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck12">
+                              <label class="custom-control-label" for="customCheck12">Todas</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck4">
+                              <label class="custom-control-label" for="customCheck4">Segunda-feira</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck5">
+                              <label class="custom-control-label" for="customCheck5">Terça-feira</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck6">
+                              <label class="custom-control-label" for="customCheck6">Quarta-feira</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck7">
+                              <label class="custom-control-label" for="customCheck7">Quinta-feira</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck8">
+                              <label class="custom-control-label" for="customCheck8">Sexta-feira</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck9">
+                              <label class="custom-control-label" for="customCheck9">Sábado</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck10">
+                              <label class="custom-control-label" for="customCheck10">Domingo</label>
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                         <label for="">Período</label>
+                           
+                        <div class="select_ mx-auto">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck11">
+                              <label class="custom-control-label" for="customCheck11">Todas</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">Manhã</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label" for="customCheck2">Tarde</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck3">
+                              <label class="custom-control-label" for="customCheck3">Noite</label>
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <label for="">Preço por aula</label>
+                       
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <b>R$ 10,00</b>
+                            </div>
+
+                            <div class="col-lg-5" style="visibility: hidden;">
+                                <input id="ex3" type="text" class="span2" value="" data-slider-min="10" data-slider-max="100" data-slider-step="5" data-slider-value="[10,100]" />
+                            </div>
+
+                            <div class="col-lg-4">
+                                <b>R$ 100,00</b>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1" style="visibility: hidden;">
+                                <b>R$ 10,00</b>
+                            </div>
+
+                            <div class="col-lg-9">
+                                <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="100" data-slider-step="5" data-slider-value="[10,100]" />
+                            </div>
+
+                            <div class="col-lg-2" style="visibility: hidden;">
+                                <b>R$ 100,00</b>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="#" class="btn default">Filtrar <i class="fas fa-filter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                   
+
+                    <div class="resultados">
+                        <div class="row">
+                    <div class="col-lg-8 mr-auto">
+                        <p class=" mt-5">Resultados encontrados: <b>00.000 </b>professores</p>
+                    </div>
+                        <div class="col-lg-4 ml-auto mt-3 mb-3">
+                        <label for="">Ordernar por</label>
+                        <select name="" id="" class="form-control">
+                            <option value="" selected="">Relevância</option>
+                            <option value="">Avaliação</option>
+                            <option value="">Preço</option>
+                        </select>
+                    </div>
+                   </div>
+                        <div class="row mt-3  mb-3">
+                            <div class="col-lg-12">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-3 mt-2"><img class="card-img-top" src="img/p1.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+
+                                            <div class="col-lg-7">
+                                                <h2 class="mb-0">
+                                                    Fulano de tal <br />
+                                                    <small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+                                                </h2>
+
+                                                <p class="text-left">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    <i class="fas fa-star-half text-warning"></i> <br />
+
+                                                    <a href="#"><small>15 avaliações</small></a>
+                                                </p>
+
+                                                <span class="badge badge-primary">TOEFL</span>
+                                                <span class="badge badge-primary">Formado em Cambridge</span>
+                                                <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+
+                                                <br />
+                                                <br />
+
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+
+                                            <div class="col-lg-2">
+                                                <h3 class="text-center pt-5 mb-0"><b>R$</b> 00,00</h3>
+                                                <p class="text-center">por aula</p>
+
+                                                <div class="text-center">
+                                                    <a href="#" class="btn default"><i class="fas fa-comments"></i> Conversar!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-lg-12">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-3 mt-2"><img class="card-img-top" src="img/p2.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+
+                                            <div class="col-lg-7">
+                                                <h2 class="mb-0">
+                                                    Fulano de tal <br />
+                                                    <small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+                                                </h2>
+
+                                                <p class="text-left">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    <i class="fas fa-star-half text-warning"></i> <br />
+
+                                                    <a href="#"><small>15 avaliações</small></a>
+                                                </p>
+
+                                                <span class="badge badge-primary">TOEFL</span>
+                                                <span class="badge badge-primary">Formado em Cambridge</span>
+                                                <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+
+                                                <br />
+                                                <br />
+
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+
+                                            <div class="col-lg-2">
+                                                <h3 class="text-center pt-5 mb-0"><b>R$</b> 00,00</h3>
+                                                <p class="text-center">por aula</p>
+
+                                                <div class="text-center">
+                                                    <a href="#" class="btn default"><i class="fas fa-comments"></i> Conversar!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-body">
+                                        <div class="row mt-3 mb-3">
+                                            <div class="col-lg-3 mt-2"><img class="card-img-top" src="img/p3.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+
+                                            <div class="col-lg-7">
+                                                <h2 class="mb-0">
+                                                    Fulano de tal <br />
+                                                    <small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+                                                </h2>
+
+                                                <p class="text-left">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    <i class="fas fa-star-half text-warning"></i> <br />
+
+                                                    <a href="#"><small>15 avaliações</small></a>
+                                                </p>
+
+                                                <span class="badge badge-primary">TOEFL</span>
+                                                <span class="badge badge-primary">Formado em Cambridge</span>
+                                                <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+
+                                                <br />
+                                                <br />
+
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+
+                                            <div class="col-lg-2">
+                                                <h3 class="text-center pt-5 mb-0"><b>R$</b> 00,00</h3>
+                                                <p class="text-center">por aula</p>
+
+                                                <div class="text-center">
+                                                    <a href="#" class="btn default"><i class="fas fa-comments"></i> Conversar!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3  mb-3">
+                            <div class="col-lg-12">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-3 mt-2"><img class="card-img-top" src="img/p1.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+
+                                            <div class="col-lg-7">
+                                                <h2 class="mb-0">
+                                                    Fulano de tal <br />
+                                                    <small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+                                                </h2>
+
+                                                <p class="text-left">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    <i class="fas fa-star-half text-warning"></i> <br />
+
+                                                    <a href="#"><small>15 avaliações</small></a>
+                                                </p>
+
+                                                <span class="badge badge-primary">TOEFL</span>
+                                                <span class="badge badge-primary">Formado em Cambridge</span>
+                                                <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+
+                                                <br />
+                                                <br />
+
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+
+                                            <div class="col-lg-2">
+                                                <h3 class="text-center pt-5 mb-0"><b>R$</b> 00,00</h3>
+                                                <p class="text-center">por aula</p>
+
+                                                <div class="text-center">
+                                                    <a href="#" class="btn default"><i class="fas fa-comments"></i> Conversar!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col-lg-12">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-3 mt-2"><img class="card-img-top" src="img/p2.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+
+                                            <div class="col-lg-7">
+                                                <h2 class="mb-0">
+                                                    Fulano de tal <br />
+                                                    <small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+                                                </h2>
+
+                                                <p class="text-left">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    <i class="fas fa-star-half text-warning"></i> <br />
+
+                                                    <a href="#"><small>15 avaliações</small></a>
+                                                </p>
+
+                                                <span class="badge badge-primary">TOEFL</span>
+                                                <span class="badge badge-primary">Formado em Cambridge</span>
+                                                <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+
+                                                <br />
+                                                <br />
+
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+
+                                            <div class="col-lg-2">
+                                                <h3 class="text-center pt-5 mb-0"><b>R$</b> 00,00</h3>
+                                                <p class="text-center">por aula</p>
+
+                                                <div class="text-center">
+                                                    <a href="#" class="btn default"><i class="fas fa-comments"></i> Conversar!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card" style="width: 100%;">
+                                    <div class="card-body">
+                                        <div class="row mt-3 mb-3">
+                                            <div class="col-lg-3 mt-2"><img class="card-img-top" src="img/p3.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+
+                                            <div class="col-lg-7">
+                                                <h2 class="mb-0">
+                                                    Fulano de tal <br />
+                                                    <small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+                                                </h2>
+
+                                                <p class="text-left">
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+                                                    <i class="fas fa-star text-warning"></i>
+
+                                                    <i class="fas fa-star-half text-warning"></i> <br />
+
+                                                    <a href="#"><small>15 avaliações</small></a>
+                                                </p>
+
+                                                <span class="badge badge-primary">TOEFL</span>
+                                                <span class="badge badge-primary">Formado em Cambridge</span>
+                                                <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+
+                                                <br />
+                                                <br />
+
+                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+
+                                            <div class="col-lg-2">
+                                                <h3 class="text-center pt-5 mb-0"><b>R$</b> 00,00</h3>
+                                                <p class="text-center">por aula</p>
+
+                                                <div class="text-center">
+                                                    <a href="#" class="btn default"><i class="fas fa-comments"></i> Conversar!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br> <br>
+
+                        <div class="col-lg-5 mx-auto">
+                            <nav aria-label="...">
+                          <ul class="pagination">
+                            <li class="page-item ">
+                              <a class="page-link disable" href="#" tabindex="-1">Anterior</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item ">
+                              <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">Próxima</a>
+                            </li>
+                          </ul>
+                        </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="links">
+                        <a href="politica.html">Politica de privacidade</a>
+                        <a href="termos.html">Termos de uso</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p>Lorem ipsum dolor - 2020</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="redes">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validation.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
+        <script type="text/javascript" src="api/calendar/dist/jquery.simple-calendar.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.js"></script>
+        <script src="js/masks.js"></script>
+        <script>
+            // With JQuery
+            $("#ex2").slider({});
+
+            // Without JQuery
+        </script>
+    </body>
+</html>

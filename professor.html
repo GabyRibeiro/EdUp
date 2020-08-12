@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="EdUp" />
+        <meta name="keywords" content="EdUp" />
+        <meta name="robots" content="" />
+        <meta name="revisit-after" content="1 day" />
+        <meta name="language" content="Portuguese" />
+        <meta name="generator" content="N/A" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <link href="api/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/logo.png" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="api/steps/jquery.steps.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <title>EdUp!</title>
+    </head>
+    <body id="prof_">
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="login_professor">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Entrar
+                        </div>
+
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <a href="#" class="btn default facebook">
+                                        <p><i class="fab fa-facebook-f"></i>Facebook</p>
+                                    </a>
+                                    <a href="#" class="btn default google">
+                                        <p><i class="fab fa-google"></i>Google</p>
+                                    </a>
+                                    <div class="form-group"><input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="form-group"><input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span></div>
+
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <div class="text-left mx-auto">
+                                                <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#esqueci_senha">Esqueci minha senha</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-5">
+                                            <div class="text-right mx-auto">
+                                                <a href="perfil_prof.html" class="btn default entrar">Entrar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br />
+
+                                    <div class="text-center">
+                                        <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#cadastro_professor">
+                                            Você ainda não possui cadastro? <br />
+                                            <b style="color: #3785ac;"> Cadastre-se</b>
+                                        </a> <br>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="esqueci_senha">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Esqueceu sua senha?
+                        </div>
+
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="form-group">
+                                        <label for="">Diga seu e-mail que enviaremos a recuperação para lá! :)</label>
+                                        <input placeholder="E-mail*" type="password" class="form-control" id="txtSenhaEsqueci" name="txtSenhaEsqueci" /><span class="error error-message"></span>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center mx-auto">
+                                                <button class="btn default closeActual" data-toggle="modal" data-target="#senha_sucesso">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="senha_sucesso">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            <i class="fas fa-check"></i> <br />
+                            Enviamos sua senha para <br />
+                            esse e-mail!
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto">
+                                    <button class="btn default closeActual">Certo!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="cadastro_professor">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title mx-auto">
+                            Cadastre-se
+                        </div>
+
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-12 mx-auto">
+                                    <div id="passo1">
+                                        <a href="#" class="btn default text-white facebook">
+                                            <p><i class="fab fa-facebook-f"></i>Facebook</p>
+                                        </a>
+                                        <a href="#" class="btn default text-white google">
+                                            <p><i class="fab fa-google"></i>Google</p>
+                                        </a>
+
+                                        <div class="form-group">
+                                            <label for="">Nome de usuário* (Máx: 15 caracteres)</label>
+                                            <input placeholder="Usuário*" type="text" class="form-control" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">E-mail*</label>
+                                            <input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Senha* (Min: 8 caracteres, 1 letra maiuscula)</label>
+                                            <input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span>
+                                        </div>
+
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input form-control" id="file2" />
+                                            <label class="custom-file-label" for="file2">Sua foto*</label>
+                                        </div>
+
+                                        <div class="text-center mt-4">
+                                            <a href="#" class="btn default mx-auto bt-avancar"> Avançar <i class="fas fa-chevron-right"></i></a>
+                                        </div>
+
+                                        
+
+                                        <div class="text-center mt-4">
+                                            <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#login_professor">
+                                                Possui cadastro? <br />
+                                                <b style="color: #3785ac;"> Entrar</b>
+                                            </a>
+                                            <br />
+                                        </div>
+                                    </div>
+
+                                    <div id="passo2" class="hide">
+                                        <label for="">Diga nos um pouco da sua experiênica :)*</label>
+                                        <textarea name="" id="" rows="5" class="form-control"></textarea>
+
+                                        <label for="">Quais são suas licenciaturas?*</label>
+                                        <textarea name="" id="" rows="5" class="form-control"></textarea>
+
+                                        <br>
+
+                                        <label for="">Link do seu video de introdução*</label>
+                                        <input type="text" class="form-control" placeholder="Youtube ou Vimeo">
+
+                                        <br />
+
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input form-control" id="file2" />
+                                            <label class="custom-file-label" for="file2">Seu CV*</label>
+                                        </div>
+
+                                        <br />
+
+                                        <div class="text-center mt-4">
+                                            <a href="#" class="btn default mx-auto bt-voltar">  <i class="fas fa-chevron-left" style="margin-left: 0; margin-right: 5px;"></i> Voltar  </a>
+                                            <a href="perfil_prof.html" class="btn default mx-auto">Cadastrar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg" id="menu">
+            <div class="navbar-brand">
+                <a href="#home" class="anch"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon3"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home2">Home <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#avaliacoes">O que os professores dizem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#como_funciona">Porque a EdUp</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quem_somos">Quem somos</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item nv text-sm-center">
+                        <a class="btn default" data-toggle="modal" data-target="#login_professor" href="#" style="">Sou professor</a>
+                    </li>
+                    <br class="mobile" />
+                    <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+                        <a class="btn default" href="index.html">Sou aluno</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="home2">
+            <div class="container-xl">
+                <div class="textos">
+                    <p class="text-left chamada">
+                        Quer ser professor da <br />
+                        EdUp?
+                    </p>
+                    <p class="text-left desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <div class="botao-quero mx-auto">
+                    <a href="#" class="btn default" data-toggle="modal" data-target="#cadastro_professor">Quero me cadastrar!</a>
+                </div>
+            </div>
+        </section>
+        <section id="avaliacoes">
+            <div class="container-xl">
+                <div class="chamada cinza">
+                    O que nossos professores dizem
+                </div>
+                <div class="row mb-5">
+                    <div class="col-lg-4">
+                        <div class="box-aval tipo-um">
+                            <div class="title">"Ótima plataforma"</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="autor">Luiz, Professor de Espanhol</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box-aval tipo-dois">
+                            <div class="title">"Ótima plataforma"</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="autor">Luiz, Professor de Espanhol</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="box-aval tipo-um">
+                            <div class="title">"Ótima plataforma"</div>
+                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="autor">Luiz, Professor de Espanhol</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="como_funciona">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-4 boxes">
+                        <div class="chamada">
+                            Porque a EdUp?
+                        </div>
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </div>
+                        <div class="text-left mx-auto">
+                            <br />
+                            <a href="#" class="btn default btn-block" data-toggle="modal" data-target="#cadastro_professor">Quero me cadastrar!</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 box">
+                        <div class="row">
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Seja escolhido</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Progressão assistida</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Disponibilidade</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                            <div class="col-lg-2 mx-auto">
+                                <div class="icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="chamada">Negócie com o aluno</div>
+                                <div class="desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="quem_somos">
+            <div class="row">
+                <div class="col-lg-6 desktop">
+                    <img src="img/quemsomos.png" style="width: 100%;" alt="" />
+                </div>
+                <div class="col-lg-6" style="padding: 25px 0;">
+                    <div class="container-xl">
+                        <div class="chamada">Quem somos</div>
+
+                        <div class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. <br />
+                            <br />
+                            Ut pharetra sit amet aliquam id diam maecenas. Eget duis at tellus at urna condimentum mattis pellentesque id. Magna etiam tempor orci eu lobortis elementum. Duis convallis convallis tellus id. Tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Porttitor lacus luctus accumsan tortor posuere ac ut consequat.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mobile">
+                    <img src="img/quemsomos.png" style="width: 100%;" alt="" />
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="links">
+                        <a href="politica.html">Politica de privacidade</a>
+                        <a href="termos.html">Termos de uso</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p>Lorem ipsum dolor - 2020</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="redes">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validation.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
+        <script type="text/javascript" src="api/calendar/dist/jquery.simple-calendar.js"></script>
+        <script src="js/masks.js"></script>
+        <script>
+            $(".aval").slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                prevArrow: '<div class="pos l"><button class="btn default"><i class="fas fa-angle-double-left"></i></button></div>',
+                nextArrow: '<div class="pos r"><button class="btn default"><i class="fas fa-angle-double-right"></i></i></button></div>',
+                responsive: [
+                    {
+                        breakpoint: 999,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true,
+                        },
+                    },
+                ],
+            });
+        </script>
+    </body>
+</html>

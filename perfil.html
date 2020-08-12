@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="EdUp" />
+        <meta name="keywords" content="EdUp" />
+        <meta name="robots" content="" />
+        <meta name="revisit-after" content="1 day" />
+        <meta name="language" content="Portuguese" />
+        <meta name="generator" content="N/A" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="Content-Language" content="pt-br" />
+        <link href="api/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/logo.png" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="api/calendar/dist/simple-calendar.css" />
+        <title>EdUp!</title>
+    </head>
+    <body>
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="aguardando_pgt">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title">
+                            <i class="fas fa-check"></i> <br />
+                            Pagamento pendente
+                        </div>
+                        <p class="text-center">
+                            Seu professor aprovou a aula. <br />
+                            Por favor prossiga com o pagamento para finalizar
+                        </p>
+                        <label for="">Revisão do pedido</label>
+                        <table class="table">
+                            <thead>
+                                <th>Valor</th>
+                                <th>Data</th>
+                                <th>Horário</th>
+                            </thead>
+                            <tbody>
+                                <td>R$ 00,00</td>
+                                <td>00/00/0000</td>
+                                <td>00:00</td>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center mx-auto mt-4">
+                                    <a href="#" class="btn default closeActual">Adicionar ao carrinho <i class="fas fa-shopping-cart"></i></a>
+                                    <a href="#carrinho" class="btn default closeActual anch">Concluir pagamento <i class="fas fa-money-check-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="detalhes_aula">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        </a>
+                        <div class="title">
+                            <i class="fas fa-check"></i> <br />
+                            Detalhes da aula
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tópico</th>
+                                    <th scope="col">Horário</th>
+                                    <th scope="col">Anexos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lorem ipsum</td>
+                                    <td>xx:xx às xx:xx</td>
+                                    <td>
+                                        <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <b>Descrição da aula:</b>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-2 mt-2"><img class="card-img-top" src="img/p1.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h2 class="mb-0">
+                                            Fulano de tal <br />
+                                            <small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+                                        </h2>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h3 class="text-center mb-0"><b>R$</b> 00,00</h3>
+                                        <p class="text-center">por aula</p>
+                                    </div>
+                                </div>
+                                <p class="text-left">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half text-warning"></i> <br />
+                                    <a href="#"><small>15 avaliações</small></a>
+                                </p>
+                                <span class="badge badge-primary">TOEFL</span>
+                                <span class="badge badge-primary">Formado em Cambridge</span>
+                                <span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg" id="menu">
+            <div class="navbar-brand">
+                <a href="#home" class="anch"><img src="img/logo.png" alt="" /></a>
+            </div>
+            <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="animated-icon3"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <!-- <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#avaliacoes">O que nossos alunos dizem</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#como_funciona">Como funciona?</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quem_somos">Quem somos</a>
+                    </li>
+                    </ul> -->
+                <ul class="navbar-nav ml-auto">
+                    <!--  <li class="nav-item nv text-sm-center">
+                        <a class="btn default" href="#" style="">Sou professor</a>
+                        </li>
+                        <br class="mobile" /> -->
+                    <div class="mobile nave">
+                        <a href="#agenda" class="btn default anch">Agenda</a>
+                        <!-- <a href="#meus_professores" class="btn default anch">Professores</a> -->
+                        <a href="busca_professor-logado.html" class="btn default">Procurar professor</a>
+                        <a href="#pagamento_aluno" class="btn default anch">Pagamento</a>
+                        <a href="#meu_carrinho" class="btn default anch">Meu carrinho</a>
+                        <a href="#historico_aluno" class="btn default anch">Histórico de aulas</a>
+                        <!-- <a href="#" class="btn default anch">Histórico de pagamento</a> -->
+                        <a href="#perfil_aluno" class="btn default anch">Meu perfil</a>
+                        <a href="#ajuda_aluno" class="btn default anch">Ajuda</a>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Notificação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Notificação</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Notificação</a>
+                        </div>
+                    </li>
+                    <li class="nav-item text-sm-center">
+                        <a href="#ajuda_aluno" class="nav-link anch">
+                        <i class="fas fa-question-circle"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+                        <a class="btn default" href="index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="aluno_logado">
+            <div class="row">
+                <div class="col-lg-2 desktop">
+                    <div class="menu-lateral">
+                        <div class="container-xl">
+                            <a href="#agenda" class="btn default anch">Agenda</a>
+                            <!-- <a href="#meus_professores" class="btn default anch">Professores</a> -->
+                            <a href="busca_professor-logado.html" class="btn default">Procurar professor</a>
+                            <a href="#historico_aluno" class="btn default anch">Histórico de aulas</a>
+                            <!-- <a href="#" class="btn default anch">Histórico de pagamento</a> -->
+                            <a href="#perfil_aluno" class="btn default anch">Meu perfil</a>
+                            <a href="#pagamento_aluno" class="btn default anch">Pagamento</a>
+                            <a href="#meu_carrinho" class="btn default anch">Meu carrinho</a>
+                            <a href="#ajuda_aluno" class="btn default anch">Ajuda</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div id="agenda" style="display: block;" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">Agenda</div>
+                            <p class="text-center">Clique no dia para ver sua aula marcada! :)</p>
+                            <div class="text-right mt-3 mb-3">
+                                <a href="busca_professor-logado.html" class="btn default">Agendar <i style="margin-left: 5px;" class="fas fa-plus-square"></i></a>
+                            </div>
+                            <div id="calendario"></div>
+                            <div class="chamada cinza">Lista</div>
+                            <p class="text-center">Aqui estão suas aulas futuras listadas!</p>
+                            <div class="list-group">
+                                <a href="chamada.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula com Professor Fernando, Inglês <span class="badge badge-danger">Aula em andamento</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                                <a href="#" data-toggle='modal' data-target='#detalhes_aula' class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula com Professor Fernando, Inglês <span class="badge badge-success">Pagamento confirmado</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula com Professor Fernando, Inglês <span class="badge badge-primary">Aguardando confirmação</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal" data-target="#aguardando_pgt">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Aula com Professor Fernando, Inglês <span class="badge badge-warning">Aguardando pagamento</span></h5>
+                                        <small>11/07/2020 12h00</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="agendamento_aluno" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Agendamento de aula
+                            </div>
+                            <p class="text-center">
+                                Preencha as informações para solicitar o agendamento da sua aula. <br />
+                                O Professor irá avaliar e agendar!
+                            </p>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-7 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option selected>Matéria*</option>
+                                                        <option>Inglês</option>
+                                                    </select>
+                                                    <span class="error error-message"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option selected>Professor*</option>
+                                                        <option>Paulo</option>
+                                                    </select>
+                                                    <span class="error error-message"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Você pode selecionar mais de uma data/horário!*</label>
+                                            <select name="" id="" class="form-control" multiple>
+                                                <option> 13/07/2020 - 12h00 às 13h00</option>
+                                                <option> 13/07/2020 - 13h00 às 14h00</option>
+                                                <option> 13/07/2020 - 14h00 às 15h00</option>
+                                                <option> 13/07/2020 - 15h00 às 16h00</option>
+                                            </select>
+                                            <span class="error error-message"></span>
+                                        </div>
+                        
+                                        <div class="form-group">
+                                            <textarea name="" placeholder="Observações" id="" cols="30" rows="3" class="form-control"></textarea>
+                                            <span class="error error-message"></span>
+                                        </div>
+                        
+                                        <div class="text-right">
+                                            <a href="#" class="btn default">Agendar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        </div> -->
+                    <div id="meus_professores" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Meus professores
+                            </div>
+                            <p class="text-center">Aqui são seus atuais professores!</p>
+                        </div>
+                    </div>
+                    <div id="pagamento_aluno" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Pagamento
+                            </div>
+                            <p class="text-center">Salve aqui seus dados de pagamento!</p>
+                            <p class="text-center mt-3 mb-3">Selecione seu metódo de pagamento:</p>
+                            <ul class="nav nav-pills rounded nav-fill mb-3" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#nav-tab-card"> <i class="fa fa-credit-card"></i> Cartão de crédito</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal"> <i class="fab fa-paypal"></i> Paypal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#nav-tab-bank"> <i class="fa fa-university"></i> Transferência bancária</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="nav-tab-card">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="username">Nome completo (como está no cartão) </label>
+                                            <input type="text" class="form-control" name="username" placeholder="" required="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cardNumber">Número do cartão de crédito</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="cardNumber" placeholder="" />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text text-muted">
+                                                    <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i>
+                                                    <i class="fab fa-cc-mastercard"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="form-group">
+                                                    <label><span class="hidden-xs">Validade</span> </label>
+                                                    <div class="input-group">
+                                                        <input type="number" class="form-control" placeholder="MM" name="" />
+                                                        <input type="number" class="form-control" placeholder="AA" name="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                                    <input type="number" class="form-control" required="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- row.// -->
+                                        <button class="btn default btn-block" type="button">Salvar</button>
+                                    </form>
+                                </div>
+                                <!-- tab-pane.// -->
+                                <div class="tab-pane fade" id="nav-tab-paypal">
+                                    <p>Paypal é a maneira mais fácil de pagar online</p>
+                                    <p>
+                                        <button type="button" class="btn btn-primary"><i class="fab fa-paypal"></i> Acessar Paypal</button>
+                                    </p>
+                                    <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div class="tab-pane fade" id="nav-tab-bank">
+                                    <p>Conta bancária</p>
+                                    <dl class="param">
+                                        <dt>Banco:</dt>
+                                        <dd>Banco XPTO</dd>
+                                    </dl>
+                                    <dl class="param">
+                                        <dt>Número da conta</dt>
+                                        <dd>12345678912345</dd>
+                                    </dl>
+                                    <dl class="param">
+                                        <dt>Digito</dt>
+                                        <dd>18</dd>
+                                    </dl>
+                                    <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <!-- tab-pane.// -->
+                            </div>
+                            <!-- tab-content .// -->
+                        </div>
+                    </div>
+                    <div id="meu_carrinho" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">Meu carrinho</div>
+                            <p class="text-center">Aqui está todas as aulas selecionadas para pagamento</p>
+                            <div id="c1">
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-lg-12">
+                                        <div class="card" style="width: 100%;">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <h2 class="text-center mb-0 pt-3">
+                                                            Fulano de tal <br />
+                                                            <small> Aulas de inglês</small>
+                                                        </h2>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <p class="text-center pt-3">Data</p>
+                                                        <h3 class="text-center mt-0 mb-0">00/00/0000 00:00</h3>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <p class="text-center pt-3">Valor</p>
+                                                        <h3 class="text-center mt-0 mb-0"><b>R$</b> 00,00</h3>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="text-center pt-4">
+                                                            <a href="#" class="btn default"><i class="fas fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-lg-12">
+                                        <div class="card" style="width: 100%;">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <h2 class="text-center mb-0 pt-3">
+                                                            Fulano de tal <br />
+                                                            <small> Aulas de inglês</small>
+                                                        </h2>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <p class="text-center pt-3">Data</p>
+                                                        <h3 class="text-center mt-0 mb-0">00/00/0000 00:00</h3>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <p class="text-center pt-3">Valor</p>
+                                                        <h3 class="text-center mt-0 mb-0"><b>R$</b> 00,00</h3>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="text-center pt-4">
+                                                            <a href="#" class="btn default"><i class="fas fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-lg-12">
+                                        <div class="card" style="width: 100%;">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <h2 class="text-center mb-0 pt-3">
+                                                            Fulano de tal <br />
+                                                            <small> Aulas de inglês</small>
+                                                        </h2>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <p class="text-center pt-3">Data</p>
+                                                        <h3 class="text-center mt-0 mb-0">00/00/0000 00:00</h3>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <p class="text-center pt-3">Valor</p>
+                                                        <h3 class="text-center mt-0 mb-0"><b>R$</b> 00,00</h3>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <div class="text-center pt-4">
+                                                            <a href="#" class="btn default"><i class="fas fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="col-12 text-right">
+                                        <h3>Valor total: R$ 00,00</h3>
+                                        <a href="#" class="btn default mx-auto bt-avancar"> Avançar <i class="fas fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="c2" class="hide">
+                                <p class="text-center mt-3 mb-3">Selecione seu metódo de pagamento:</p>
+                                <ul class="nav nav-pills rounded nav-fill mb-3" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="pill" href="#nav-tab-card"> <i class="fa fa-credit-card"></i> Cartão de crédito</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal"> <i class="fab fa-paypal"></i> Paypal</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#nav-tab-bank"> <i class="fa fa-university"></i> Transferência bancária</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="nav-tab-card">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="username">Nome completo (como está no cartão) </label>
+                                                <input type="text" class="form-control" name="username" placeholder="" required="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cardNumber">Número do cartão de crédito</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" name="cardNumber" placeholder="" />
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text text-muted">
+                                                        <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-amex"></i>
+                                                        <i class="fab fa-cc-mastercard"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <label><span class="hidden-xs">Validade</span> </label>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control" placeholder="MM" name="" />
+                                                            <input type="number" class="form-control" placeholder="AA" name="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                                        <input type="number" class="form-control" required="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- row.// -->
+                                        </form>
+                                    </div>
+                                    <!-- tab-pane.// -->
+                                    <div class="tab-pane fade" id="nav-tab-paypal">
+                                        <p>Paypal é a maneira mais fácil de pagar online</p>
+                                        <p>
+                                            <button type="button" class="btn btn-primary"><i class="fab fa-paypal"></i> Acessar Paypal</button>
+                                        </p>
+                                        <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-tab-bank">
+                                        <p>Conta bancária</p>
+                                        <dl class="param">
+                                            <dt>Banco:</dt>
+                                            <dd>Banco XPTO</dd>
+                                        </dl>
+                                        <dl class="param">
+                                            <dt>Número da conta</dt>
+                                            <dd>12345678912345</dd>
+                                        </dl>
+                                        <dl class="param">
+                                            <dt>Digito</dt>
+                                            <dd>18</dd>
+                                        </dl>
+                                        <p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <!-- tab-pane.// -->
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="col-12 text-right">
+                                        <h3>Valor total: R$ 00,00</h3>
+                                        <a href="#" class="btn default mx-auto bt-voltar">  <i class="fas fa-chevron-left" style="margin-left: 0; margin-right: 5px;"></i> Voltar  </a>
+                                        <a href="#" class="btn default mx-auto">Finalizar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="historico_aluno" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">Histórico de aulas</div>
+                            <p class="text-center">
+                                Aqui você pode ver todo seu histórico!
+                            </p>
+                            <div class="row mb-4">
+                                <div class="col-lg-4">
+                                    <label for="">Escolha uma opção para ordenar</label>
+                                    <select class="form-control">
+                                        <option selected>Ordenar por:</option>
+                                        <option value="1">Data</option>
+                                        <option value="2">Matéria</option>
+                                        <option value="3">Professor</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="">Aqui você pode filtrar por matérias</label>
+                                    <select class="form-control">
+                                        <option selected>Matérias</option>
+                                        <option value="1">Inglês</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="">Ou aqui você pode pesquisar por qualquer palavra chave</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="search" value="" id="example-search-input" placeholder="Buscar" />
+                                        <span class="input-group-append">
+                                            <div class="input-group-text" style="background-color: #ee5921;"><i class="fa fa-search" style="color: #fff;"></i></div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Aula com o Professor Paulo
+                                                </button>
+                                                <small class="">09/07/2020</small>
+                                                <span class="badge badge-primary">Inglês</span>
+                                            </div>
+                                            <div class="col-lg-5 text-right">
+                                                <h4 class="pt-2">
+                                                R$ 00,00
+                                                <h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Tópico</th>
+                                                        <th scope="col">Duração</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Lorem ipsum</td>
+                                                        <td>2 horas</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Conselhos do professor:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Minha nota para a aula:</b>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i> <br />
+                                            <b>Comentários:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                                Aula com o Professor Paulo
+                                                </button>
+                                                <small class="">09/07/2020</small>
+                                                <span class="badge badge-primary">Inglês</span>
+                                            </div>
+                                            <div class="col-lg-5 text-right">
+                                                <h4 class="pt-2">
+                                                R$ 00,00
+                                                <h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Tópico</th>
+                                                        <th scope="col">Duração</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Lorem ipsum</td>
+                                                        <td>2 horas</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Conselhos do professor:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Minha nota para a aula:</b>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i> <br />
+                                            <b>Comentários:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                                Aula com o Professor Paulo
+                                                </button>
+                                                <small class="">09/07/2020</small>
+                                                <span class="badge badge-primary">Inglês</span>
+                                            </div>
+                                            <div class="col-lg-5 text-right">
+                                                <h4 class="pt-2">
+                                                R$ 00,00
+                                                <h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Tópico</th>
+                                                        <th scope="col">Duração</th>
+                                                        <th scope="col">Anexos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Lorem ipsum</td>
+                                                        <td>2 horas</td>
+                                                        <td>
+                                                            <a href="#"><i class="fas fa-file-alt"></i> Exemplo.pdf</a>, <a href="#"><i class="fas fa-file-image"></i> Imagem.jpg</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br />
+                                            <b>Descrição da aula:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Conselhos do professor:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                            <b>Minha nota para a aula:</b>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i> <br />
+                                            <b>Comentários:</b>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="perfil_aluno" class="insider">
+                        <div class="chamada cinza">Meu perfil</div>
+                        <p class="text-center">
+                            Aqui você pode editar seus dados, se quiser. <br />
+                            Apenas lembre em clicar em salvar!
+                        </p>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="text-center">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbG7XfojwgexJS50HnkEpEihsCDuCFp-dK69ZmrhXVoculu05S&s" width="100%" style="max-width: 170px;" alt="" />
+                                    </div>
+                                    <div class="form-group"><input placeholder="" value="Fulano de tal" type="text" class="form-control" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span></div>
+                                    <div class="form-group">
+                                        <input placeholder="" value="faluno@hotmail.com" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span>
+                                    </div>
+                                    <div class="form-group"><input placeholder="" value="abcdefgh1" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span></div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control" id="file" />
+                                        <label class="custom-file-label" for="file">suafoto.png</label>
+                                    </div>
+                                    <p class="text-center mt-3">Adicione sua descrição*</p>
+                                    <div class="container-xl">
+                                        <div id="summernote"></div>
+                                    </div>
+                                    <p class="text-center mt-3">Se quiser, conte mais um pouco sobre você!</p>
+                                    <div class="container-xl">
+                                        <div id="summernote2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center mx-auto">
+                                                <br />
+                                                <button class="btn default btn-block">Salvar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="ajuda_aluno" class="insider">
+                        <div class="container-xl">
+                            <div class="chamada cinza">
+                                Ajuda
+                            </div>
+                            <p class="text-center">Precisa de ajuda? Escreva para gente para o time EdUp!</p>
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-lg-7 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option selected>Assunto*</option>
+                                                        <option>Dúvida</option>
+                                                    </select>
+                                                    <span class="error error-message"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea name="" placeholder="Mensagem" id="" cols="30" rows="3" class="form-control"></textarea>
+                                            <span class="error error-message"></span>
+                                        </div>
+                                        <div class="text-right">
+                                            <a href="#" class="btn default btn-block">Enviar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="text-center"> <br>
+                                <b>Cancelamento de Aulas</b> <br>
+                                - Antes de 24 horas, 20% do valor da aula cobrado. <br>
+                                - Entre 12 e 24 horas, 50% do valor da aula cobrado. <br>
+                                - Entre 2 e 12 horas, 80% do valor da aula cobrado. <br>
+                                - Abaixo de 2 horas/ausência na aula, 100% do valor da aula cobrado. <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="links">
+                        <a href="politica.html">Politica de privacidade</a>
+                        <a href="termos.html">Termos de uso</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p>Lorem ipsum dolor - 2020</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="redes">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/validation.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
+        <script type="text/javascript" src="api/calendar/dist/jquery.simple-calendar.js"></script>
+        <script src="js/masks.js"></script>
+        <script>
+            $("#summernote").summernote({
+                placeholder: "",
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ["style", ["style"]],
+                    ["font", ["bold", "underline", "clear"]],
+                    ["color", ["color"]],
+                    ["para", ["ul", "ol", "paragraph"]],
+                    ["table", ["table"]],
+                    ["insert", ["link", "picture", "video"]],
+                    ["view", ["fullscreen", "codeview", "help"]],
+                ],
+            });
+            $("#summernote2").summernote({
+                placeholder: "",
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ["style", ["style"]],
+                    ["font", ["bold", "underline", "clear"]],
+                    ["color", ["color"]],
+                    ["para", ["ul", "ol", "paragraph"]],
+                    ["table", ["table"]],
+                    ["insert", ["link", "picture", "video"]],
+                    ["view", ["fullscreen", "codeview", "help"]],
+                ],
+            });
+        </script>
+    </body>
+</html>
