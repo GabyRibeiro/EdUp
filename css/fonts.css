@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Nexa';
-    src: url('../Fonts/Nexa-Bold.woff') format('woff');
+    src: url('/Fonts/Nexa-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'NexaW01';
-    src: url('../Fonts/NexaW01-Black.woff') format('woff');
+    src: url('/Fonts/NexaW01-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'NexaW02';
-    src: url('../Fonts/NexaW01-Heavy.woff') format('woff');
+    src: url('/Fonts/NexaW01-Heavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
