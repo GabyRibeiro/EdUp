@@ -1,8 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @media (max-width: 999px) { 
 
 
 .mobile {
-	display: block;
+    display: block;
 }
 
 .bt-pesquisa .col-lg-10, .bt-pesquisa .col-lg-2 {
@@ -37,11 +44,11 @@ body#prof_ {
     text-align: center;
 }
 .desktop {
-	display: none;
+    display: none;
 }
 
 #home .chamada, #home2 .chamada {
-	font-size: 2rem;
+    font-size: 2rem;
 }
 
 #home .container-xl {
@@ -54,7 +61,7 @@ body#prof_ {
 }
 
 #como_funciona .text-left {
-	text-align: center!important;
+    text-align: center!important;
 }
 
 #home {
@@ -69,7 +76,7 @@ body#prof_ {
 }
 
 #home .col-lg-9.mx-auto {
-	padding: 0 !important;
+    padding: 0 !important;
 }
 
 .col-lg-4:last-child .fundo-branco {
@@ -83,11 +90,11 @@ body#prof_ {
 
 
 .col-lg-8:first-child .fundo-branco {
-	padding: 5px;
+    padding: 5px;
 }
 
 .botao-quero {
-	text-align: center;
+    text-align: center;
 }
 
 
@@ -96,7 +103,7 @@ body#prof_ {
 }
 
 section {
-	top:  initial;
+    top:  initial;
 
 }
 
@@ -121,6 +128,30 @@ section {
     margin: 5vw auto;
     width: 100px;
     height: 100px;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.8rem;
+}
+
+::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.8rem;
+}
+
+:-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.8rem;
+}
+
+::-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.8rem;
 }
 
 ::placeholder, #cadastro_aluno .custom-file label {
