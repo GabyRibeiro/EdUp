@@ -97,6 +97,14 @@ $(window).resize(function () {
 
   });
 
+  $('#ajudaAssunto').change(function(){
+      if($(this).val() == '2'){
+        $('.aulas-confirmadas').slideDown();
+      } else {
+            $('.aulas-confirmadas').slideUp();
+        }
+    });
+
 
   $('.first-button').on('click', function () {
 

@@ -37,7 +37,7 @@
             
             </div>
             </div> -->
-        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="login_aluno">
+        <!--         <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="login_aluno">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -87,13 +87,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="esqueci_senha">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
                         <a href="#" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </a>
                         <div class="title mx-auto">
                             Esqueceu sua senha?
@@ -124,7 +124,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <a href="#" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </a>
                         <div class="title mx-auto">
                             <i class="fas fa-check"></i> <br />
@@ -147,10 +147,10 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <a href="#" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </a>
                         <div class="title mx-auto">
-                            Cadastre-se
+                            Cadastro de Aluno
                         </div>
                         <form action="">
                             <div class="row">
@@ -174,12 +174,13 @@
                                         <input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span>
                                     </div>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input form-control" id="file2">
+                                        <input type="file" class="custom-file-input form-control" id="file2" />
                                         <label class="custom-file-label" for="file2">Sua foto</label>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="text-center mx-auto"> <br>
+                                            <div class="text-center mx-auto">
+                                                <br />
                                                 <a href="busca_professor_logado.html" class="btn default">Cadastrar</a>
                                             </div>
                                         </div>
@@ -187,8 +188,8 @@
                                     <div class="row text-center mt-3">
                                         <div class="col-lg-6">
                                             <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#login_aluno">
-                                            Possui cadastro? <br />
-                                            <b style="color: #3785ac;"> Entrar</b>
+                                                Possui cadastro? <br />
+                                                <b style="color: #3785ac;"> Entrar</b>
                                             </a>
                                         </div>
                                         <div class="col-lg-6">
@@ -230,7 +231,7 @@
                     </li>
                     <br class="mobile" />
                     <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
-                        <a class="btn default" href="#" data-toggle="modal" data-target="#login_aluno">Sou aluno</a>
+                        <a class="btn default" href="#" >Sou aluno</a>
                     </li>
                 </ul>
             </div>
@@ -238,19 +239,8 @@
         <section id="home">
             <img src="img/banner_azul.png" width="100%" class="mobile" alt="" />
             <div class="container-xl">
-                <div class="textos">
-                    <p class="text-left chamada">Conheça a EdUp</p>
-                    <p class="text-left desc">
-                        A EdUp providencia o instrumento de comunicação entre alunos e profissionais da educação dentro da plataforma. <br />
-                        <br />
-                        Todos os professores são profissionais com experiência, e professores com boas avaliações podem escolher a também serem moderadores da qualidade de ensino, supervisionando professores atuais (aqueles que possuem uma
-                        avaliação abaixo da nossa expectativa de qualidade) e aqueles que desejam entrar na plataforma!
-                    </p>
-                </div>
-                <div class="botao-quero mx-auto">
-                    <a href="#" class="btn default" data-toggle="modal" data-target="#cadastro_aluno">Quero me cadastrar!</a>
-                </div>
-                <div class="col-lg-9 mx-auto">
+                <div class="mobile">
+                    <div class="col-lg-9 mx-auto">
                     <div class="row bt-pesquisa mt-5 mb-3">
                         <div class="col-lg-10 mx-auto">
                             <div class="fundo-branco">
@@ -259,13 +249,87 @@
                             <b class="text-white">Mais procurados:</b> <a href="#" class="text-white">Inglês, </a><a href="#" class="text-white">Português, </a><a class="text-white" href="#">Matemática</a>
                         </div>
                         <div class="col-lg-2 mx-auto">
-                            <a href="busca_professor.html" class="btn default">
-                            Buscar <i class="fas fa-search"></i>
-                            </a>
+                            <a href="busca_professor.html" class="btn default"> Buscar <i class="fas fa-search"></i> </a>
                         </div>
                     </div>
                 </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="textos">
+                            <p class="text-left chamada">Conheça a EdUp</p>
+                            <p class="text-left desc">
+                                A EdUp providencia o instrumento de comunicação entre alunos e profissionais da educação dentro da plataforma. <br />
+                                <br />
+                                Todos os professores são profissionais com experiência, e professores com boas avaliações podem escolher a também serem moderadores da qualidade de ensino, supervisionando professores atuais (aqueles que
+                                possuem uma avaliação abaixo da nossa expectativa de qualidade) e aqueles que desejam entrar na plataforma!
+                            </p>
+                        </div>
+                        <div class="botao-quero mx-auto">
+                            <a href="#" class="btn default" data-toggle="modal" data-target="#cadastro_aluno">Quero me cadastrar!</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mx-auto">
+                        <div class="" id="login_aluno">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-8 mx-auto text-center mb-3">
+                                        <a href="#" class="btn default facebook">
+                                            <p><i class="fab fa-facebook-f"></i></p>
+                                        </a>
+                                        <a href="#" class="btn default google">
+                                            <p><i class="fab fa-google"></i></p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 mx-auto">
+                                        <div class="form-group"><input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span></div>
+                                        <div class="form-group"><input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span></div>
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="text-left mx-auto">
+                                                    <a href="#" style="font-size: 0.7rem;" class="text-center closeActual" data-toggle="modal" data-target="#esqueci_senha"><i class="fas fa-key"></i> Esqueci minha senha</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="text-right mx-auto">
+                                                    <a href="perfil.html" class="btn default entrar">Entrar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-center" style="font-size: 0.8rem;">
+                                            Você ainda não possui cadastro? <br />
+                                            <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#cadastro_aluno">
+                                                <b style="color: #3785ac; font-size: 1rem;"> Cadastre-se</b>
+                                            </a>
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="desktop">
+                    <div class="col-lg-9 mx-auto">
+                    <div class="row bt-pesquisa mt-5 mb-3">
+                        <div class="col-lg-10 mx-auto">
+                            <div class="fundo-branco">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="O que deseja aprender? Ex: Matematica" />
+                            </div>
+                            <b class="text-white">Mais procurados:</b> <a href="#" class="text-white">Inglês, </a><a href="#" class="text-white">Português, </a><a class="text-white" href="#">Matemática</a>
+                        </div>
+                        <div class="col-lg-2 mx-auto">
+                            <a href="busca_professor.html" class="btn default"> Buscar <i class="fas fa-search"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
+
+
         </section>
         <section id="avaliacoes">
             <div class="container-xl">
@@ -276,21 +340,30 @@
                     <div class="col-lg-4">
                         <div class="box-aval tipo-um">
                             <div class="title">"Ótimos professores"</div>
-                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat.
+                            </div>
                             <div class="autor">Bianca, 21</div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="box-aval tipo-dois">
                             <div class="title">"Ótimos professores"</div>
-                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat.
+                            </div>
                             <div class="autor">Bianca, 21</div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="box-aval tipo-um">
                             <div class="title">"Ótimos professores"</div>
-                            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            <div class="desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat.
+                            </div>
                             <div class="autor">Bianca, 21</div>
                         </div>
                     </div>
@@ -529,7 +602,7 @@
                         </div>
                         <div class="text-left mx-auto">
                             <br />
-                            <a href="#" class="btn default btn-block"  data-toggle="modal" data-target="#cadastro_aluno">Quero me cadastrar!</a>
+                            <a href="#" class="btn default btn-block" data-toggle="modal" data-target="#cadastro_aluno">Quero me cadastrar!</a>
                         </div>
                     </div>
                     <div class="col-lg-8 box">

@@ -25,7 +25,7 @@
         <title>EdUp!</title>
     </head>
     <body id="prof_">
-        <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="login_professor">
+        <!-- <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="login_professor">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="esqueci_senha">
             <div class="modal-dialog">
@@ -151,7 +151,7 @@
                             <span aria-hidden="true">&times;</span>
                         </a>
                         <div class="title mx-auto">
-                            Cadastre-se
+                            Cadastro de Professor
                         </div>
 
                         <form action="">
@@ -256,7 +256,7 @@
                 </ul>
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item nv text-sm-center">
-                        <a class="btn default" data-toggle="modal" data-target="#login_professor" href="#" style="">Sou professor</a>
+                        <a class="btn default" href="#" style="">Sou professor</a>
                     </li>
                     <br class="mobile" />
                     <li class="nav-item text-sm-center nv" style="margin-left: 10px;">
@@ -267,7 +267,9 @@
         </nav>
         <section id="home2">
             <div class="container-xl">
-                <div class="textos">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="textos">
                     <p class="text-left chamada">
                         Quer ser professor da <br />
                         EdUp?
@@ -279,6 +281,54 @@
                 </div>
                 <div class="botao-quero mx-auto">
                     <a href="#" class="btn default" data-toggle="modal" data-target="#cadastro_professor">Quero me cadastrar!</a>
+                </div>
+                    </div>
+                    <div class="col-lg-4 mx-auto">
+                        <div id="login_professor">
+ 
+                        <form>
+                            <div class="row">
+                                    <div class="col-lg-8 mx-auto text-center mb-3">
+                                        <a href="#" class="btn default facebook">
+                                            <p><i class="fab fa-facebook-f"></i></p>
+                                        </a>
+                                        <a href="#" class="btn default google">
+                                            <p><i class="fab fa-google"></i></p>
+                                        </a>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <div class="form-group"><input placeholder="E-mail*" type="text" class="form-control formato-email" id="txtEmailLogin" name="txtEmailLogin" /><span class="error error-message"></span></div>
+                                    <div class="form-group"><input placeholder="Senha*" type="password" class="form-control" id="txtSenhaLogin" name="txtSenhaLogin" /><span class="error error-message"></span></div>
+
+                                    <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="text-left mx-auto">
+                                                    <a href="#" style="font-size: 0.7rem;" class="text-center closeActual" data-toggle="modal" data-target="#esqueci_senha"><i class="fas fa-key"></i> Esqueci minha senha</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="text-right mx-auto">
+                                                    <a href="perfil_prof.html" class="btn default entrar">Entrar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-center" style="font-size: 0.8rem;">
+                                            Você ainda não possui cadastro? <br />
+                                            <a href="#" class="text-center closeActual" data-toggle="modal" data-target="#cadastro_professor">
+                                                <b style="color: #3785ac; font-size: 1rem;"> Cadastre-se</b>
+                                            </a>
+                                            <br />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
                 </div>
             </div>
         </section>

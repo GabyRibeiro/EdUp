@@ -101,6 +101,43 @@ b, strong {
 
 }
 
+.calendario-semanal .table td, .calendario-semanal  .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+}
+
+.calendario-semanal .table tbody td {
+	padding: 0;
+} .calendario-semanal .table tbody td.dia {
+	padding: .75rem;
+} .calendario-semanal .table thead th {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #1274bb;
+    color: #fff;
+    border: 0 !important;
+}
+
+.calendario-semanal .btn.default {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    color: #fff;
+    background-color: #ffffff;
+    box-shadow: none;
+    min-height: 50px;
+    align-items: center;
+ 
+} .calendario-semanal .btn.default.active {
+	background-color: #ee5921;
+} .calendario-semanal .btn.default:hover {
+	transform: scale(1);
+	padding: 10px 20px;
+
+}
+
 /* .modal a {
 	color: #484848;
 	font-family: 'Nexa';
@@ -126,7 +163,9 @@ b, strong {
     padding-top: 10px !important;
 }
 
- 
+#agendamento_aluno .modal-dialog{
+	max-width: 800px !important;
+}
 
 .modal-dialog {
     max-width: 600px !important;
@@ -275,9 +314,22 @@ section {
 	font-size: 1rem;
 	color: #fff;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04);
-	width: 40%;
 } #home2 .container-xl {
     max-width: 1300px;
+}
+
+#login_aluno, #login_professor  {
+	background-color: #fff;
+     padding: 15px;
+    width: 100%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
+} #login_aluno {
+     margin-top: 49px;
+ 
+} #login_professor  {
+     margin-top: 79px;
+ 
 }
 
 body#prof_ {
@@ -308,8 +360,7 @@ body#prof_ {
 	font-size: 1rem;
 	color: #fff;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.04);
-	width: 40%;
-}
+ }
 
 .botao-quero {
 	text-align: left;
@@ -497,6 +548,12 @@ body#prof_ {
    }  
 
 
+/* carrinho */
+
+#meu_carrinho h3{
+	font-size: 1.4rem;
+}
+
 
 /**/
 
@@ -557,6 +614,37 @@ body#prof_ {
     color: #222 !important;
     font-size: 1.1rem;
 }
+
+#login_aluno ::-webkit-input-placeholder, #login_professor ::-webkit-input-placeholder  {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.9rem;
+}
+
+#login_aluno ::-moz-placeholder, #login_professor ::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.9rem;
+}
+
+#login_aluno :-ms-input-placeholder, #login_professor :-ms-input-placeholder  {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.9rem;
+}
+
+#login_aluno ::-ms-input-placeholder, #login_professor ::-ms-input-placeholder  {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.9rem;
+}
+
+#login_aluno ::placeholder, #login_professor ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222 !important;
+    font-size: 0.9rem;
+}
+
 
 #cadastro_aluno label{
 	    font-family: 'Nexa';
@@ -628,8 +716,6 @@ label{
 	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
 	        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
 } .facebook {
-	width: 100% !important;
-    padding: 5px !important;
     background-color: #3F51B5 !important;
 } #login_aluno p, #cadastro_aluno p, #login_professor p, #cadastro_professor p  {
     margin-top: 0!important;
@@ -642,12 +728,11 @@ label{
 
 .facebook p, .google p{
 	color: #fff !important;
+	text-align: center;
 }
 
 .google {
-	width: 100% !important;
-    padding: 5px !important;
-    margin: 3px auto 15px auto;
+ 
     background-color: #f44336 !important;
 }
 

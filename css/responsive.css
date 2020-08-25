@@ -31,7 +31,8 @@
     font-size: 11px;
     text-align: justify;
     color: #fff;
-    padding: 0 15px;
+    padding: 0 60px;
+    margin-bottom: 5px;
 } 
 
 body#prof_ {
@@ -55,6 +56,16 @@ body#prof_ {
 
     padding-bottom: 40px;
 }
+
+#home2 {
+    background-size: 300%; 
+}
+
+#login_aluno, #login_professor {
+ 
+    border-radius:  15px;
+}
+
 
 .text-sm-center {
     text-align: center!important;
