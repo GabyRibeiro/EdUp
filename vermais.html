@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="EdUp" />
+		<meta name="keywords" content="EdUp" />
+		<meta name="robots" content="" />
+		<meta name="revisit-after" content="1 day" />
+		<meta name="language" content="Portuguese" />
+		<meta name="generator" content="N/A" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta http-equiv="Content-Language" content="pt-br" />
+		<link href="api/font-awesome/css/fontawesome-all.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="img/logo.png" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="api/calendar/dist/simple-calendar.css" />
+		<title>EdUp!</title>
+	</head>
+	<body>
+		<!--        <div class="loader">
+			<div class="text-center">
+
+			    <img src="img/logo.png" class="animated bounceIn infinite slow " alt=""><br><br>
+			    <img src="img/logo_promo.png" class="animated fadeIn ll slow" alt="">
+			    <br><br>
+			    <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+			      <span class="sr-only">Loading...</span>
+			    </div>
+
+			</div>
+			</div> -->
+		<div class="modal animated bounceIn" tabindex="-1" role="dialog" id="agendamento_aluno">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<a href="#" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						</a>
+						<div class="container-xl">
+							<div class="title mx-auto">
+								Agendamento de aula
+							</div>
+							<p class="text-center">
+								Preencha as informações para solicitar o agendamento da sua aula. <br />
+								O Professor irá avaliar e agendar!
+							</p>
+							<div class="row">
+								<div class="col-lg-12">
+									<label for="">Selecione seu horário</label>
+									<!-- <input type="date" class="form-control"> -->
+									<div class="dias-disponiveis">
+										<div class="calendario-semanal">
+											<table class="table table-responsive-sm">
+												<thead>
+													<th></th>
+													<th>
+														Segunda
+													</th>
+													<th>
+														Terça-feira
+													</th>
+													<th>
+														Quarta-feira
+													</th>
+													<th>
+														Quinta-feira
+													</th>
+													<th>
+														Sexta-feira
+													</th>
+													<th>
+														Sábado
+													</th>
+													<th>
+														Domingo
+													</th>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="dia">08:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">09:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">10:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">11:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">12:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">13:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" checked="" disabled readonlyautocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">14:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">15:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">16:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">17:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">18:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">19:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">20:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">21:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="dia">22:00</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+														<td>
+															<div class="btn-group-toggle" data-toggle="buttons">
+																<label class="btn default">
+																<input type="checkbox" autocomplete="off" />
+																</label>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<label for="">O que deseja ver na aula?</label>
+									<textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+									<label for="">Se desejar, pode anexar documentos</label>
+									<div class="custom-file">
+										<input type="file" multiple class="custom-file-input form-control" id="file1" />
+										<label class="custom-file-label" for="file1"></label>
+									</div>
+									<div class=" mt-3">
+										<a href="#" class="btn default  laranja btn-block closeActual" data-toggle="modal" data-target="#sucesso_agendamento">Adicionar para Carrinho <i class="fas fa-cart-plus"></i></a>
+									</div>
+									<div class="text-center mt-3" style="font-size: 0.8rem;background-color: #F44336;color: #fff;padding: 5px;">
+										<i class="fas fa-exclamation-circle"></i> Limite de pagamento, até 4 horas. Horas excedentes serão anuladas e poderão ser agendadas por outros alunos.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal animated bounceIn" tabindex="-1" role="dialog" id="sucesso_agendamento">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<a href="#" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						</a>
+						<div class="title">
+							<i class="fas fa-check"></i> <br />
+							Sua solicitação de agendamento <br> foi enviada!
+						</div>
+						<p class="mx-auto">
+							Aguarde a confirmação do professor. <br>Ela chegará nas suas notificãções e em seu e-mail cadastrado.
+						</p>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="text-center mx-auto mt-4">
+									<button class="btn default closeActual">Certo!</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg" id="menu">
+			<div class="navbar-brand">
+				<a href="#home" class="anch"><img src="img/logo.png" alt="" /></a>
+			</div>
+			<button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="animated-icon3"><span></span><span></span><span></span></div>
+			</button>
+			<div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+				<!-- <ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+					    <a class="nav-link" href="#home">Home <span class="sr-only">(página atual)</span></a>
+					</li>
+					<li class="nav-item">
+					    <a class="nav-link" href="#avaliacoes">O que nossos alunos dizem</a>
+					</li>
+
+					<li class="nav-item">
+					    <a class="nav-link" href="#como_funciona">Como funciona?</a>
+					</li>
+
+					<li class="nav-item">
+					    <a class="nav-link" href="#quem_somos">Quem somos</a>
+					</li>
+					</ul> -->
+				<ul class="navbar-nav ml-auto">
+					<!--  <li class="nav-item nv text-sm-center">
+						<a class="btn default" href="#" style="">Sou professor</a>
+						</li>
+						<br class="mobile" /> -->
+					<div class="mobile nave">
+						<a href="#agenda" class="btn default anch">Agenda</a>
+						<!-- <a href="#meus_professores" class="btn default anch">Professores</a> -->
+						<a href="#" class="btn default anch">Procurar professor</a>
+						<a href="#pagamento_aluno" class="btn default anch">Pagamento</a>
+						<a href="#historico_aluno" class="btn default anch">Histórico de aulas</a>
+						<!-- <a href="#" class="btn default anch">Histórico de pagamento</a> -->
+						<a href="#perfil_aluno" class="btn default anch">Meu perfil</a>
+						<a href="#ajuda_aluno" class="btn default anch">Ajuda</a>
+					</div>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fas fa-bell"></i>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Notificação</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Notificação</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Notificação</a>
+						</div>
+					</li>
+					<li class="nav-item text-sm-center">
+						<a href="perfil.html" class="nav-link anch">
+						<i class="fas fa-question-circle"></i>
+						</a>
+					</li>
+					<li class="nav-item text-sm-center ">
+						<a href="" class="btn default anch">Meu carrinho<i style="color: #fff; margin-right: 3px;" class="fas fa-shopping-cart"></i></a>
+					</li>
+					<li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+						<a class="btn default" href="perfil.html">Minha conta</a>
+					</li>
+					<li class="nav-item text-sm-center nv" style="margin-left: 10px;">
+						<a class="btn default" href="index.html">Sair</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<section id="buscar_professor">
+			<div class="principal">
+				<div class="chamada">
+					Professores particulares
+				</div>
+				<p class="text-center text-white">Aqui você encontra os melhores professores e bem avaliados!</p>
+				<div class="col-lg-9 mx-auto">
+					<div class="row bt-pesquisa mt-5 mb-3">
+						<div class="col-lg-10 mx-auto">
+							<div class="fundo-branco">
+								<input type="text" class="form-control" id="inputEmail3" placeholder="O que deseja aprender? Ex: Matematica" />
+							</div>
+						</div>
+						<div class="col-lg-2 mx-auto">
+							<a href="#" class="btn default"> Buscar <i class="fas fa-search"></i> </a>
+						</div>
+					</div>
+					<b class="text-white">Mais procurados:</b> <a href="#" class="text-white">Inglês, </a><a href="#" class="text-white">Português, </a><a class="text-white" href="#">Matemática</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="h5 text-center mt-5 mb-5">
+						<a href="busca_professor.html"><i class="fas fa-arrow-circle-left mr-1"></i>Voltar</a>
+					</div>
+				</div>
+				<div class="col-lg-10">
+					<div class="resultados">
+
+						<div class="row mt-3 mb-3">
+							<div class="col-lg-12">
+								<div class="card" style="width: 100%;">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-lg-3 mt-2"><img class="card-img-top" src="img/p1.png" width="100%" alt="Imagem de capa do card" /> <br /></div>
+											<div class="col-lg-7">
+												<h2 class="mb-0">
+													Fulano de tal <br />
+													<small style="font-size: 70%; position: relative; top: -10px;"> Aulas de inglês</small>
+												</h2>
+												<p class="text-left">
+													<i class="fas fa-star text-warning"></i>
+													<i class="fas fa-star text-warning"></i>
+													<i class="fas fa-star text-warning"></i>
+													<i class="fas fa-star text-warning"></i>
+													<i class="fas fa-star-half text-warning"></i> <br />
+													<a href="#"><small>15 avaliações</small></a>
+												</p>
+												<span class="badge badge-primary">TOEFL</span>
+												<span class="badge badge-primary">Formado em Cambridge</span>
+												<span class="badge badge-primary">Educador</span> <span class="badge badge-primary">Fluente em Alemão</span> <span class="badge badge-primary">Experiência aulas juvenil</span>
+												<br />
+												<br />
+												<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+											</div>
+											<div class="col-lg-2">
+												<h3 class="text-center pt-5 mb-0"><b>R$</b> 00,00</h3>
+												<p class="text-center">por aula</p>
+												<div class="text-center">
+													<a href="#" data-toggle="modal" data-target="#agendamento_aluno" class="btn default"><i class="fas fa-calendar-plus mr-2"></i>Agendar</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-10 mx-auto">
+                      <div class="galeria mt-4">
+  											<div class="single-item">
+  												<div class="p-5">
+  													<div class="card" style="width: 100%;">
+  														<img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+  														<div class="card-body">
+  															<h5 class="card-title">
+  																Aula gratuita
+  															</h5>
+
+  														</div>
+  													</div>
+  												</div>
+  												<div class="p-5">
+  													<div class="card" style="width: 100%;">
+  														<img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+  														<div class="card-body">
+  															<h5 class="card-title">
+  																Minha apresentação
+  															</h5>
+
+  														</div>
+  													</div>
+  												</div>
+                          <div class="p-5">
+  													<div class="card" style="width: 100%;">
+  														<img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+  														<div class="card-body">
+  															<h5 class="card-title">
+  																Aula gratuita
+  															</h5>
+
+  														</div>
+  													</div>
+  												</div>
+  												<div class="p-5">
+  													<div class="card" style="width: 100%;">
+  														<img class="card-img-top" src="https://getuikit.com/v2/docs/images/placeholder_600x400.svg" alt="Imagem de capa do card" />
+  														<div class="card-body">
+  															<h5 class="card-title">
+  																Minha apresentação
+  															</h5>
+
+  														</div>
+  													</div>
+  												</div>
+  											</div>
+  										</div>
+                    </div>
+										<div class="row">
+											<p class="card-text m-5"> <a href="#" class="btn default d-inline"><i class="fas fa-file-alt"></i> Curriculo.pdf</a> <br> <br>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus sed turpis tincidunt id. Tortor pretium viverra suspendisse potenti nullam ac tortor. Neque gravida in fermentum et sollicitudin ac orci phasellus egestas. Arcu vitae elementum curabitur vitae nunc sed. Sit amet porttitor eget dolor morbi non arcu. Duis at consectetur lorem donec massa. Eget nunc scelerisque viverra mauris. Vel fringilla est ullamcorper eget nulla facilisi. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Tempus quam pellentesque nec nam aliquam sem et tortor. Est ante in nibh mauris. Feugiat pretium nibh ipsum consequat nisl vel. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Id diam vel quam elementum pulvinar etiam. Et molestie ac feugiat sed lectus vestibulum mattis. Congue eu consequat ac felis. Egestas integer eget aliquet nibh praesent tristique magna sit. Facilisi nullam vehicula ipsum a arcu cursus. Arcu odio ut sem nulla pharetra diam.
+												<br><br>
+												Sed faucibus turpis in eu mi bibendum neque egestas. Diam quis enim lobortis scelerisque. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Malesuada pellentesque elit eget gravida cum sociis natoque. Elit eget gravida cum sociis natoque penatibus et magnis. Aliquet enim tortor at auctor urna. In eu mi bibendum neque egestas congue quisque. Hendrerit gravida rutrum quisque non. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac. Amet consectetur adipiscing elit ut aliquam purus sit. Tortor pretium viverra suspendisse potenti nullam ac tortor. Non tellus orci ac auctor augue mauris augue neque. At in tellus integer feugiat scelerisque varius morbi. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Est ultricies integer quis auctor elit.
+											</p>
+										</div>
+
+                    <div class="text-center">
+                      <a href="#" data-toggle="modal" data-target="#agendamento_aluno" class="btn default d-inline"><i class="fas fa-calendar-plus mr-2"></i>Agendar</a>
+                    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="links">
+						<a href="politica.html">Politica de privacidade</a>
+						<a href="termos.html">Termos de uso</a>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<p>Lorem ipsum dolor - 2020</p>
+				</div>
+				<div class="col-lg-4">
+					<div class="redes">
+						<a href="#"><i class="fab fa-facebook"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/jquery.validate.js"></script>
+		<script src="js/validation.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+		<script type="text/javascript" src="js/jquery.mask.js"></script>
+		<script type="text/javascript" src="api/calendar/dist/jquery.simple-calendar.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.js"></script>
+		<script src="js/masks.js"></script>
+		<script>
+			$('.single-item').slick({
+			  infinite: true,
+			  slidesToShow: 2,
+			  slidesToScroll: 1,
+			  arrows: true,
+			  dots: true,
+			  prevArrow: '<div class="pos l"><button class="btn default"><i class="fas fa-angle-double-left"></i></button></div>',
+			  nextArrow: '<div class="pos r"><button class="btn default"><i class="fas fa-angle-double-right"></i></i></button></div>',
+			  responsive: [
+			      {
+			          breakpoint: 999,
+			          settings: {
+			              slidesToShow: 1,
+			              slidesToScroll: 1,
+			              infinite: true,
+			              dots: true,
+			          },
+			      },
+			  ],
+			});
+
+		</script>
+	</body>
+</html>
